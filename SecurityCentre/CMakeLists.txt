@@ -23,6 +23,18 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(SecurityCentre
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        Model/agent.h Model/agent.cpp
+        Model/agentsstorage.h Model/agentsstorage.cpp
+        Model/rfidagent.h Model/rfidagent.cpp
+        Model/facialrecognitionagent.h Model/facialrecognitionagent.cpp
+        Model/fingerprintagent.h Model/fingerprintagent.cpp
+        Model/authlog.h Model/authlog.cpp
+        Model/eagentaccessresult.h Model/eagentaccessresult.cpp
+        Controller/controller.h Controller/controller.cpp
+        Model/eagentstatus.h Model/eagentstatus.cpp
+        Model/Valid/validfacial.h Model/Valid/validfacial.cpp
+        Model/Valid/validrfid.h Model/Valid/validrfid.cpp
+        Model/Valid/validfingerprint.h Model/Valid/validfingerprint.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET SecurityCentre APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
