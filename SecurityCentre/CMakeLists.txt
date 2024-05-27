@@ -29,9 +29,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Model/facialrecognitionagent.h Model/facialrecognitionagent.cpp
         Model/fingerprintagent.h Model/fingerprintagent.cpp
         Model/authlog.h Model/authlog.cpp
-        Model/eagentaccessresult.h Model/eagentaccessresult.cpp
         Controller/controller.h Controller/controller.cpp
-        Model/eagentstatus.h Model/eagentstatus.cpp
         Model/Valid/validfacial.h Model/Valid/validfacial.cpp
         Model/Valid/validrfid.h Model/Valid/validrfid.cpp
         Model/Valid/validfingerprint.h Model/Valid/validfingerprint.cpp
