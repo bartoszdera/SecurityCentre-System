@@ -48,7 +48,7 @@ public:
     inline std::vector<AuthLog> logs() { return this->logs_; }
 
 protected:
-    virtual EAgentAccessResult VerifyAccess(std::string authenticationData);
+    virtual EAgentAccessResult VerifyAccess(std::string authenticationData){ return EAgentAccessResult::kDenied; }
 
 private:
     void add_log(std::time_t timestamp, std::string authData, EAgentAccessResult result);
