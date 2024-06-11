@@ -45,9 +45,8 @@ public:
     Agent(int id, std::string desc);
     inline std::string description() { return this->description_; }
     inline EAgentState state() { return this->state_; }
+    EAgentState setState(EAgentState state);
     inline std::vector<AuthLog> logs() { return this->logs_; }
-
-protected:
     virtual EAgentAccessResult VerifyAccess(std::string authenticationData){ return EAgentAccessResult::kDenied; }
 
 private:

@@ -22,7 +22,6 @@ set(PROJECT_SOURCES
         Model/rfidagent.h Model/rfidagent.cpp
         Model/facialrecognitionagent.h Model/facialrecognitionagent.cpp
         Model/fingerprintagent.h Model/fingerprintagent.cpp
-        Model/authlog.h Model/authlog.cpp
         Controller/controller.h Controller/controller.cpp
         Model/Valid/validfacial.h Model/Valid/validfacial.cpp
         Model/Valid/validrfid.h Model/Valid/validrfid.cpp

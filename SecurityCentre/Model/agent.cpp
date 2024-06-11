@@ -10,6 +10,13 @@ Agent::Agent(int id, std::string desc) : id_(id), description_(desc) {
     this->logs_ = std::vector<AuthLog>();
 }
 
+Agent::EAgentState Agent::setState(EAgentState state)
+{
+    this->state_ = state;
+    // TODO: Don't like this solution.
+    return this->state_;
+}
+
 void Agent::add_log(time_t timestamp, std::string authData, EAgentAccessResult result)
 {
     auto log = Agent::AuthLog(timestamp, authData, result);
