@@ -1,3 +1,5 @@
+#include <qobject.h>
+#include <qtmetamacros.h>
 #include<string>
 #include<vector>
 #include<ctime>
@@ -5,8 +7,9 @@
 #ifndef AGENT_H
 #define AGENT_H
 
-class Agent
+class Agent : public QObject
 {
+    Q_OBJECT
 // MEMBERS DECLARATIONS
 public:
     enum class EAgentState
@@ -31,6 +34,13 @@ public:
         AuthLog(std::time_t timestamp, std::string authData, EAgentAccessResult result);
         std::string getAuthLog();
     };
+
+public slots:
+    void changeState();
+
+signals:
+    void agentCreated(int id_, bool boolState, std::string description_, std::vector<Agent::AuthLog> logs_);
+    void stateChanged(bool boolState);
 
 private:
     int id_;

@@ -18,11 +18,10 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
         Model/agent.h Model/agent.cpp
-        Model/agentsstorage.h Model/agentsstorage.cpp
+        # Model/agentsstorage.h Model/agentsstorage.cpp
         Model/rfidagent.h Model/rfidagent.cpp
         Model/facialrecognitionagent.h Model/facialrecognitionagent.cpp
         Model/fingerprintagent.h Model/fingerprintagent.cpp
-        Controller/controller.h Controller/controller.cpp
         Model/Valid/validfacial.h Model/Valid/validfacial.cpp
         Model/Valid/validrfid.h Model/Valid/validrfid.cpp
         Model/Valid/validfingerprint.h Model/Valid/validfingerprint.cpp

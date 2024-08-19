@@ -5,7 +5,7 @@ AgentsStorage::AgentsStorage() {
     agentList_ = std::vector<Agent>();
 }
 
-Agent AgentsStorage::addAgent(int id)
+Agent AgentsStorage::addAgent(int id, Agent agentType)
 {
     Agent tempAgent = Agent(id);
     agentList_.push_back(tempAgent);
@@ -13,7 +13,7 @@ Agent AgentsStorage::addAgent(int id)
     return tempAgent;
 }
 
-Agent AgentsStorage::addAgent(int id, std::string desc)
+Agent AgentsStorage::addAgent(int id, Agent agentType, std::string desc)
 {
     Agent tempAgent = Agent(id, desc);
     agentList_.push_back(tempAgent);

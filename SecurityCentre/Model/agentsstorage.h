@@ -1,15 +1,17 @@
-#include "agent.h"
 #include <vector>
+#include <QObject>
+#include "agent.h"
 
 #ifndef AGENTSSTORAGE_H
 #define AGENTSSTORAGE_H
 
-class AgentsStorage
+class AgentsStorage : public QObject
 {
+    Q_OBJECT
 public:
     AgentsStorage();
-    Agent addAgent(int id);
-    Agent addAgent(int id, std::string desc);
+    Agent addAgent(int id, Agent agentType);
+    Agent addAgent(int id, Agent agentType, std::string desc);
     Agent::EAgentState turnOffAgent(int agentId);
     Agent::EAgentState turnOnAgent(int agentId);
     Agent::EAgentAccessResult verifyAccess(int agentId, std::string authData);
@@ -17,6 +19,9 @@ public:
     Agent::EAgentState getAgentsStatus(int agentId);
     std::vector<Agent::AuthLog> getAgentsLogs(int agentId);
     inline std::vector<Agent> agentList() { return this->agentList_; }
+
+public slots:
+    void newAgent();
 
 private:
     std::vector<Agent> agentList_;

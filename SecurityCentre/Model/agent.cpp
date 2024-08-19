@@ -1,5 +1,18 @@
 #include "agent.h"
 
+void Agent::changeState()
+{
+    if(state() == EAgentState::kOn) {
+        setState(EAgentState::kOff);
+        emit stateChanged(false);
+    }
+    else{
+        setState(EAgentState::kOn);
+        emit stateChanged(true);
+    }
+
+}
+
 Agent::Agent(int id)
 {
     Agent(id, "Empty");
@@ -8,6 +21,7 @@ Agent::Agent(int id)
 Agent::Agent(int id, std::string desc) : id_(id), description_(desc) {
     this->state_ = EAgentState::kOn;
     this->logs_ = std::vector<AuthLog>();
+
 }
 
 Agent::EAgentState Agent::setState(EAgentState state)
@@ -44,5 +58,5 @@ Agent::AuthLog::AuthLog(time_t timestamp, std::string authData, EAgentAccessResu
 
 std::string Agent::AuthLog::getAuthLog()
 {
-    return this->timestamp_ + " An authorization attempt was made.\nAutorization data: " + this->authData_ + "\nResult: " + enumAccessToString(this->result_);
+    return /*this->timestamp_*/ + " An authorization attempt was made.\nAutorization data: " + this->authData_ + "\nResult: " + enumAccessToString(this->result_);
 }
