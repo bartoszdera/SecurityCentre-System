@@ -3,16 +3,15 @@
 
 #include "electronicdevice.h"
 #include "Enum/accessresult.h"
+#include <any>
 
-template<typename T>
 class AgentDevice : public ElectronicDevice
 {
 public:
     AgentDevice(int _id);
-    virtual AccessResult verifyAccess(T credentials) = 0;
-};
+    virtual ~AgentDevice() = default;
 
-template<typename T>
-AgentDevice<T>::AgentDevice(int _id) : ElectronicDevice(_id) {}
+    virtual AccessResult verifyAccess(const std::any& credentials) = 0;
+};
 
 #endif // AGENTDEVICE_H

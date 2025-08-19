@@ -1,7 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "Model/DeviceStorage.h"
 #include <QMainWindow>
+#include <memory>
 #include <string>
 
 QT_BEGIN_NAMESPACE
@@ -15,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(std::shared_ptr<DeviceStorage> _storage, QWidget *parent = nullptr);
     ~MainWindow();
 
 public slots:
@@ -34,11 +36,10 @@ private slots:
 
     void on_actionOtworz_triggered();
 
-    void on_pushButton_clicked();
-
     void on_facialRec_Agent_Button_clicked();
 
 private:
     Ui::MainWindow *ui;
+    std::shared_ptr<DeviceStorage> storage;
 };
 #endif // MAINWINDOW_H

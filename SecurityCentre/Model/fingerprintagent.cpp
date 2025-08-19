@@ -1,10 +1,22 @@
 #include "fingerprintagent.h"
+#include "IValidData.h"
+#include <memory>
 
-template<typename T>
-FingerprintAgent<T>::FingerprintAgent(int _id, const ValidData<T> &_validFingerprints) : AgentDevice<T>(_id), validFingerprints(_validFingerprints) {}
+FingerprintAgent::FingerprintAgent(int _id, std::unique_ptr<IValidData> _validFingerprints) : AgentDevice(_id), validFingerprints(std::move(_validFingerprints)) {}
 
-template<typename T>
-AccessResult FingerprintAgent<T>::verifyAccess(T credentials)
+AccessResult FingerprintAgent::verifyAccess(const std::any& credentials)
 {
-    return validFingerprints.matches(credentials) ? AccessResult::GRANTED : AccessResult::DENIED ;
+    if (this->getStatus() == ElectronicDevice::DeviceStatus::OFF) {
+        return AccessResult::GRANTED;
+    }
+    else {
+        auto match = validFingerprints->matches(credentials);
+        if (match) {
+            emit fingerprintAccessGranted();
+        }
+        else {
+            emit fingerprintAccessDenied();
+        }
+        return match ? AccessResult::GRANTED : AccessResult::DENIED;
+    }
 }

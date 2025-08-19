@@ -25,7 +25,13 @@ void ElectronicDevice::setStatus(DeviceStatus _status)
     status = _status;
 }
 
+
 ElectronicDevice::DeviceStatus ElectronicDevice::getStatus()
 {
     return status;
+}
+
+void ElectronicDevice::toggleStatus()
+{
+    status = (status == DeviceStatus::ON) ? DeviceStatus::OFF : DeviceStatus::ON;
 }

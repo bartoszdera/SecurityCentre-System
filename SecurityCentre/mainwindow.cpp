@@ -2,12 +2,14 @@
 #include "./ui_mainwindow.h"
 #include "mgmnt_panel.h"
 #include "simulator.h"
+#include <memory>
 #include <qobject.h>
 #include <qwidget.h>
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(std::shared_ptr<DeviceStorage> _storage, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , storage(_storage)
 {
     ui->setupUi(this);
 }
@@ -17,48 +19,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-// void MainWindow::choosenAgentID(std::string idValue)
-// {
-//     ui->label_Agent_ID_value->setText(QString::fromStdString(idValue));
-// }
-
-// void MainWindow::choosenAgentInfo(std::string infoValue)
-// {
-//     std::cout<<"agentInfo slot triggered"<<std::endl;
-//     ui->textEdit_Description->setText(QString::fromStdString(infoValue));
-// }
-
-// void MainWindow::choosenAgentState(bool stateValue)
-// {
-//     std::cout<<"agentState slot triggered with bool: "<< stateValue <<std::endl;
-//     if(stateValue) {
-//         ui->label_Agent_State_value->setText("ON");
-//     }
-//     else {
-//         ui->label_Agent_State_value->setText("OFF");
-//     }
-// }
-
-// void MainWindow::choosenAgentLogs(std::vector<std::string> logsValue)
-// {
-//     ui->listWidget_Agent_logs->clear();
-//     for(std::vector<std::string>::iterator it = logsValue.begin(); it != logsValue.end(); ++it) {
-//         ui->listWidget_Agent_logs->addItem(QString::fromStdString(it->data()));
-//     }
-// }
-
-// void MainWindow::on_button_ChangeAgentState_clicked()
-// {
-//     std::cout<<"BUTTON ChangeState CLICKED"<<std::endl;
-//     emit agentStateChanged(ui->spinBox_agentChoice->value());
-// }
-
-// void MainWindow::on_spinBox_agentChoice_valueChanged(int arg1)
-// {
-//     std::cout<<"Agent with ID: " << arg1 << " selected." <<std::endl;
-//     emit agentChoosen(arg1);
-// }
-
 void MainWindow::on_actionOtworz_triggered()
 {
     Simulator* simulator = new Simulator();
@@ -67,19 +27,10 @@ void MainWindow::on_actionOtworz_triggered()
     simulator->show();
 }
 
-
-void MainWindow::on_pushButton_clicked()
-{
-    MgmntPanel* facialRecAgentPanel = new MgmntPanel();
-    facialRecAgentPanel->raise();
-    facialRecAgentPanel->activateWindow();
-    facialRecAgentPanel->show();
-}
-
-
 void MainWindow::on_facialRec_Agent_Button_clicked()
 {
-    MgmntPanel* facialRecAgentPanel = new MgmntPanel();
+    auto device = std::dynamic_pointer_cast<AgentDevice>(storage->getDeviceById(1));
+    MgmntPanel* facialRecAgentPanel = new MgmntPanel(device);
     facialRecAgentPanel->raise();
     facialRecAgentPanel->activateWindow();
     facialRecAgentPanel->show();

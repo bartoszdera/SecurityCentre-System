@@ -92,10 +92,10 @@
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="changeStatus_button">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>280</x>
      <y>60</y>
      <width>111</width>
      <height>51</height>
@@ -123,7 +123,7 @@
     <string>Status:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="label_id">
    <property name="geometry">
     <rect>
      <x>80</x>

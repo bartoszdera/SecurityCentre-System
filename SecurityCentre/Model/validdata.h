@@ -11,7 +11,7 @@ public:
     void setData(std::vector<T> _data);
     void addData(T _dataUnit);
     std::vector<T> getData();
-    bool matches(T toMatch);
+    bool matches(T toMatch) const;
 private:
     std::vector<T> data;
 };
@@ -38,7 +38,7 @@ std::vector<T> ValidData<T>::getData()
 }
 
 template<typename T>
-bool ValidData<T>::matches(T toMatch)
+bool ValidData<T>::matches(T toMatch) const
 {
     for(auto dataUnit : data){
         if(dataUnit == toMatch){

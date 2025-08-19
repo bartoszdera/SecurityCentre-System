@@ -1,18 +1,25 @@
 #ifndef FINGERPRINTAGENT_H
 #define FINGERPRINTAGENT_H
 
-#include "agentdevice.h"
-#include "validdata.h"
+#include "IValidData.h"
+#include "AgentDevice.h"
+#include <memory>
+#include <qtmetamacros.h>
 
-template<typename T>
-class FingerprintAgent : public AgentDevice<T>
+class FingerprintAgent : public AgentDevice
 {
+    Q_OBJECT
+
 private:
-    ValidData<T> validFingerprints;
+    std::unique_ptr<IValidData> validFingerprints;
 
 public:
-    FingerprintAgent(int _id, const ValidData<T> &_validFingerprints);
-    AccessResult verifyAccess(T credentials) override;
+    FingerprintAgent(int _id, std::unique_ptr<IValidData> _validFingerprints);
+    AccessResult verifyAccess(const std::any& credentials) override;
+
+signals:
+    void fingerprintAccessGranted();
+    void fingerprintAccessDenied();
 };
 
 #endif // FINGERPRINTAGENT_H

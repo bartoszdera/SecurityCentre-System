@@ -35,11 +35,14 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         mgmnt_panel.h mgmnt_panel.cpp mgmnt_panel.ui
         Model/electronicdevice.h Model/electronicdevice.cpp
         Model/detectordevice.h Model/detectordevice.cpp
-        Model/agentdevice.h Model/agentdevice.cpp
+        Model/AgentDevice.h Model/AgentDevice.cpp
         Model/validdata.h Model/validdata.cpp
 
         Model/Enum/accessresult.h
-        Model/devicestorage.h Model/devicestorage.cpp
+        Model/DeviceStorage.h Model/DeviceStorage.cpp
+        Model/IValidData.h
+        Model/ValidDataWrapper.h
+
 )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET SecurityCentre APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
