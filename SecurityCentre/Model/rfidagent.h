@@ -1,18 +1,18 @@
-#include "agent.h"
-#include "Valid/validrfid.h"
-
 #ifndef RFIDAGENT_H
 #define RFIDAGENT_H
 
-class RFIDAgent : public Agent
-{
-public:
-    RFIDAgent(int id);
-    RFIDAgent(int id, std::string desc);
-    Agent::EAgentAccessResult VerifyAccess(std::string authenticationData);
+#include "agentdevice.h"
+#include "validdata.h"
 
+template<typename T>
+class RFIDAgent : public AgentDevice<T>
+{
 private:
-    ValidRFID validRfid;
+    ValidData<T> validRFIDs;
+
+public:
+    RFIDAgent(int _id, const ValidData<T> &_validRFIDs);
+    AccessResult verifyAccess(T credentials) override;
 };
 
 #endif // RFIDAGENT_H

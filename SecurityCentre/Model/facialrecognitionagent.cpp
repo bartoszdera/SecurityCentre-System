@@ -1,20 +1,24 @@
-#include "facialrecognitionagent.h"
+// #include "facialrecognitionagent.h"
+// #include "Enum/accessresult.h"
+// #include "electronicdevice.h"
 
-FacialRecognitionAgent::FacialRecognitionAgent(int id) : Agent(id) {}
+// template<typename T>
+// FacialRecognitionAgent<T>::FacialRecognitionAgent(int _id, const ValidData<T> &_validFacials) : AgentDevice<T>(_id), validFacials(_validFacials) {}
 
-FacialRecognitionAgent::FacialRecognitionAgent(int id, std::string desc) : Agent(id, desc) {}
-
-Agent::EAgentAccessResult FacialRecognitionAgent::VerifyAccess(std::string authenticationData)
-{
-    if(Agent::state() == Agent::EAgentState::kOff){
-        return Agent::EAgentAccessResult::kOmmitted;
-    }
-
-    for(auto &elem : validFacial.validFacials()){
-        if(authenticationData == elem){
-            return Agent::EAgentAccessResult::kGranted;
-        }
-    }
-
-    return Agent::EAgentAccessResult::kDenied;
-}
+// template<typename T>
+// AccessResult FacialRecognitionAgent<T>::verifyAccess(T credentials)
+// {
+//     if (this->getStatus() == ElectronicDevice::DeviceStatus::OFF) {
+//         return AccessResult::GRANTED;
+//     }
+//     else {
+//         auto result = validFacials.matches(credentials) ? AccessResult::GRANTED : AccessResult::DENIED;
+//         if (result == AccessResult::GRANTED) {
+//             emit facialAccessGranted();
+//         }
+//         else {
+//             emit facialAccessDenied();
+//         }
+//         return result;
+//     }
+// }

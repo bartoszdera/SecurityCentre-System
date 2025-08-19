@@ -6,7 +6,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
@@ -17,8 +17,8 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        Model/agent.h Model/agent.cpp
-        # Model/agentsstorage.h Model/agentsstorage.cpp
+
+
         Model/rfidagent.h Model/rfidagent.cpp
         Model/facialrecognitionagent.h Model/facialrecognitionagent.cpp
         Model/fingerprintagent.h Model/fingerprintagent.cpp
@@ -31,7 +31,16 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(SecurityCentre
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-    )
+        simulator.h simulator.cpp simulator.ui
+        mgmnt_panel.h mgmnt_panel.cpp mgmnt_panel.ui
+        Model/electronicdevice.h Model/electronicdevice.cpp
+        Model/detectordevice.h Model/detectordevice.cpp
+        Model/agentdevice.h Model/agentdevice.cpp
+        Model/validdata.h Model/validdata.cpp
+
+        Model/Enum/accessresult.h
+        Model/devicestorage.h Model/devicestorage.cpp
+)
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET SecurityCentre APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)

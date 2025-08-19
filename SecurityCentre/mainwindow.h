@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "Model/agent.h"
+#include <string>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,12 +19,24 @@ public:
     ~MainWindow();
 
 public slots:
-    void agentCreated(int id_, bool boolState, std::string description_, std::vector<Agent::AuthLog> logs_);
-    void stateChanged(bool boolState);
-    void on_button_ChangeState_clicked();
+    // void choosenAgentID(std::string idValue);
+    // void choosenAgentInfo(std::string infoValue);
+    // void choosenAgentState(bool stateValue);
+    // void choosenAgentLogs(std::vector<std::string> logsValue);
 
 signals:
-    void changeState();
+    // void agentChoosen(int arg1);
+    // void agentStateChanged(int arg1);
+
+private slots:
+    // void on_button_ChangeAgentState_clicked();
+    // void on_spinBox_agentChoice_valueChanged(int arg1);
+
+    void on_actionOtworz_triggered();
+
+    void on_pushButton_clicked();
+
+    void on_facialRec_Agent_Button_clicked();
 
 private:
     Ui::MainWindow *ui;

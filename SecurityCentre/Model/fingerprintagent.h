@@ -1,18 +1,18 @@
-#include "agent.h"
-#include "Valid/validfingerprint.h"
-
 #ifndef FINGERPRINTAGENT_H
 #define FINGERPRINTAGENT_H
 
-class FingerprintAgent : public Agent
-{
-public:
-    FingerprintAgent(int id);
-    FingerprintAgent(int id, std::string desc);
-    Agent::EAgentAccessResult VerifyAccess(std::string authenticationData);
+#include "agentdevice.h"
+#include "validdata.h"
 
+template<typename T>
+class FingerprintAgent : public AgentDevice<T>
+{
 private:
-    ValidFingerprint validFingerprint;
+    ValidData<T> validFingerprints;
+
+public:
+    FingerprintAgent(int _id, const ValidData<T> &_validFingerprints);
+    AccessResult verifyAccess(T credentials) override;
 };
 
 #endif // FINGERPRINTAGENT_H

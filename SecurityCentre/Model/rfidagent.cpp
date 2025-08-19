@@ -1,20 +1,10 @@
 #include "rfidagent.h"
 
-RFIDAgent::RFIDAgent(int id) : Agent(id) {}
+template<typename T>
+RFIDAgent<T>::RFIDAgent(int _id, const ValidData<T> &_validRFIDs) : AgentDevice<T>(_id), validRFIDs(_validRFIDs) {}
 
-RFIDAgent::RFIDAgent(int id, std::string desc) : Agent(id, desc) {}
-
-Agent::EAgentAccessResult RFIDAgent::VerifyAccess(std::string authenticationData)
+template<typename T>
+AccessResult RFIDAgent<T>::verifyAccess(T credentials)
 {
-    if(Agent::state() == Agent::EAgentState::kOff){
-        return Agent::EAgentAccessResult::kOmmitted;
-    }
-
-    for(auto &elem : validRfid.validRfids()){
-        if(authenticationData == elem){
-            return Agent::EAgentAccessResult::kGranted;
-        }
-    }
-
-    return Agent::EAgentAccessResult::kDenied;
+    return validRFIDs.matches(credentials) ? AccessResult::GRANTED : AccessResult::DENIED ;
 }
