@@ -38,6 +38,10 @@ private slots:
 
     void on_facialRec_Agent_Button_clicked();
 
+    void on_rfid_Agent_Button_clicked();
+
+    void on_fingerprint_Agent_Button_clicked();
+
 private:
     Ui::MainWindow *ui;
     std::shared_ptr<DeviceStorage> storage;

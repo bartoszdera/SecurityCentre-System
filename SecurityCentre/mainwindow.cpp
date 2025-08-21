@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "Model/ElectronicDevice.h"
 #include "agent_mgmnt_panel.h"
 #include "simulator.h"
 #include <memory>
@@ -31,8 +32,34 @@ void MainWindow::on_facialRec_Agent_Button_clicked()
 {
     auto device = std::dynamic_pointer_cast<AgentDevice>(storage->getDeviceById(1));
     AgentMgmntPanel* facialRecAgentPanel = new AgentMgmntPanel(device);
+    connect(device.get(), &ElectronicDevice::newLogAdded, facialRecAgentPanel, &AgentMgmntPanel::handleNewLog);
+
     facialRecAgentPanel->raise();
     facialRecAgentPanel->activateWindow();
     facialRecAgentPanel->show();
+}
+
+
+void MainWindow::on_rfid_Agent_Button_clicked()
+{
+    auto device = std::dynamic_pointer_cast<AgentDevice>(storage->getDeviceById(2));
+    AgentMgmntPanel* rfidAgentPanel = new AgentMgmntPanel(device);
+    connect(device.get(), &ElectronicDevice::newLogAdded, rfidAgentPanel, &AgentMgmntPanel::handleNewLog);
+
+    rfidAgentPanel->raise();
+    rfidAgentPanel->activateWindow();
+    rfidAgentPanel->show();
+}
+
+
+void MainWindow::on_fingerprint_Agent_Button_clicked()
+{
+    auto device = std::dynamic_pointer_cast<AgentDevice>(storage->getDeviceById(3));
+    AgentMgmntPanel* fingerprintAgentPanel = new AgentMgmntPanel(device);
+    connect(device.get(), &ElectronicDevice::newLogAdded, fingerprintAgentPanel, &AgentMgmntPanel::handleNewLog);
+
+    fingerprintAgentPanel->raise();
+    fingerprintAgentPanel->activateWindow();
+    fingerprintAgentPanel->show();
 }
 

@@ -472,7 +472,7 @@
 Agent</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="rfid_Agent_Button">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -485,7 +485,7 @@ Agent</string>
      <string>RFID Agent</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="fingerprint_Agent_Button">
     <property name="geometry">
      <rect>
       <x>700</x>
@@ -499,7 +499,7 @@ Agent</string>
  Agent</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="motion_Conference_Sensor_Button">
     <property name="geometry">
      <rect>
       <x>860</x>
@@ -513,7 +513,7 @@ Agent</string>
 sensor</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="smoke_Detector_Sensor_Button">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -527,7 +527,7 @@ sensor</string>
 detector</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="motion_Corridor_Sensor_Button">
     <property name="geometry">
      <rect>
       <x>610</x>

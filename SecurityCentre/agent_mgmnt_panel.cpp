@@ -17,7 +17,6 @@ AgentMgmntPanel::~AgentMgmntPanel()
     delete ui;
 }
 
-
 void AgentMgmntPanel::on_changeStatus_button_clicked()
 {
     device->toggleStatus();
@@ -25,4 +24,15 @@ void AgentMgmntPanel::on_changeStatus_button_clicked()
                              ? QString("ON")
                              : QString("OFF");
     ui->changeStatus_button->setText(QString("%1").arg(statusText));
+}
+
+void AgentMgmntPanel::handleNewLog()
+{
+    ui->logs_plainTextEdit->clear();
+
+    auto logs = device->getLogs();
+    for (auto log : logs)
+    {
+        ui->logs_plainTextEdit->appendPlainText(QString::fromStdString(log));
+    }
 }

@@ -68,7 +68,7 @@
     <string>Device logs</string>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="plainTextEdit">
+  <widget class="QPlainTextEdit" name="logs_plainTextEdit">
    <property name="geometry">
     <rect>
      <x>40</x>

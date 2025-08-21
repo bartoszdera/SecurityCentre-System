@@ -19,8 +19,9 @@ public:
 signals:
     void temp(int argument);
 
-private slots:
+public slots:
     void on_changeStatus_button_clicked();
+    void handleNewLog();
 
 private:
     Ui::MgmntPanel *ui;
