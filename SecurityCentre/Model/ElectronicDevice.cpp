@@ -1,4 +1,4 @@
-#include "electronicdevice.h"
+#include "ElectronicDevice.h"
 
 ElectronicDevice::ElectronicDevice(int _id) : id(_id)
 {

@@ -1,5 +1,5 @@
 #include "DeviceStorage.h"
-#include "electronicdevice.h"
+#include "ElectronicDevice.h"
 #include <memory>
 #include <stdexcept>
 

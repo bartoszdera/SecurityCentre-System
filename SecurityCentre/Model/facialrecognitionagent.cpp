@@ -1,6 +1,6 @@
 #include "facialrecognitionagent.h"
 #include "Enum/accessresult.h"
-#include "electronicdevice.h"
+#include "ElectronicDevice.h"
 
 FacialRecognitionAgent::FacialRecognitionAgent(int _id, std::unique_ptr<IValidData> _validFacials) : AgentDevice(_id), validFacials(std::move(_validFacials)) {}
 

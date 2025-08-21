@@ -1,7 +1,7 @@
 #ifndef DEVICESTORAGE_H
 #define DEVICESTORAGE_H
 
-#include "electronicdevice.h"
+#include "ElectronicDevice.h"
 #include <vector>
 
 class DeviceStorage

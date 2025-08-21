@@ -1,7 +1,7 @@
 #ifndef DETECTORDEVICE_H
 #define DETECTORDEVICE_H
 
-#include "electronicdevice.h"
+#include "ElectronicDevice.h"
 
 class DetectorDevice : public ElectronicDevice
 {

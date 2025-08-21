@@ -1,7 +1,7 @@
 #ifndef AGENTDEVICE_H
 #define AGENTDEVICE_H
 
-#include "electronicdevice.h"
+#include "ElectronicDevice.h"
 #include "Enum/accessresult.h"
 #include <any>
 

@@ -32,8 +32,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         simulator.h simulator.cpp simulator.ui
-        mgmnt_panel.h mgmnt_panel.cpp mgmnt_panel.ui
-        Model/electronicdevice.h Model/electronicdevice.cpp
+        agent_mgmnt_panel.h agent_mgmnt_panel.cpp agent_mgmnt_panel.ui
+        Model/ElectronicDevice.h Model/ElectronicDevice.cpp
         Model/detectordevice.h Model/detectordevice.cpp
         Model/AgentDevice.h Model/AgentDevice.cpp
         Model/validdata.h Model/validdata.cpp

@@ -12,20 +12,21 @@ class ElectronicDevice : public QObject
 
 public:
     enum class DeviceStatus{ OFF=0, ON=1 };
+    ElectronicDevice(int _id);
+    void setStatus(DeviceStatus _status);
+    void toggleStatus();
+    int getId() const;
+    std::vector<std::string> getLogs() const;
+    DeviceStatus getStatus();
 
 private:
     const int id;
     std::vector<std::string> logs;
     DeviceStatus status;
 
-public:
-    ElectronicDevice(int _id);
-    int getId() const;
+protected:
     void addLog(std::string log);
-    std::vector<std::string> getLogs() const;
-    void setStatus(DeviceStatus _status);
-    DeviceStatus getStatus();
-    void toggleStatus();
+
 };
 
 #endif // ELECTRONICDEVICE_H

@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "mgmnt_panel.h"
+#include "agent_mgmnt_panel.h"
 #include "simulator.h"
 #include <memory>
 #include <qobject.h>
@@ -30,7 +30,7 @@ void MainWindow::on_actionOtworz_triggered()
 void MainWindow::on_facialRec_Agent_Button_clicked()
 {
     auto device = std::dynamic_pointer_cast<AgentDevice>(storage->getDeviceById(1));
-    MgmntPanel* facialRecAgentPanel = new MgmntPanel(device);
+    AgentMgmntPanel* facialRecAgentPanel = new AgentMgmntPanel(device);
     facialRecAgentPanel->raise();
     facialRecAgentPanel->activateWindow();
     facialRecAgentPanel->show();

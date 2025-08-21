@@ -1,5 +1,5 @@
-#ifndef MGMNT_PANEL_H
-#define MGMNT_PANEL_H
+#ifndef AGENT_MGMNT_PANEL_H
+#define AGENT_MGMNT_PANEL_H
 
 #include "Model/AgentDevice.h"
 #include <QWidget>
@@ -8,13 +8,13 @@ namespace Ui {
 class MgmntPanel;
 }
 
-class MgmntPanel : public QWidget
+class AgentMgmntPanel : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit MgmntPanel(std::shared_ptr<AgentDevice> _device, QWidget *parent = nullptr);
-    ~MgmntPanel();
+    explicit AgentMgmntPanel(std::shared_ptr<AgentDevice> _device, QWidget *parent = nullptr);
+    ~AgentMgmntPanel();
 
 signals:
     void temp(int argument);
@@ -27,4 +27,4 @@ private:
     std::shared_ptr<AgentDevice> device;
 };
 
-#endif // MGMNT_PANEL_H
+#endif // AGENT_MGMNT_PANEL_H
