@@ -23,10 +23,10 @@ private:
     const int id;
     std::vector<std::string> logs;
     DeviceStatus status;
-    std::string to_string(DeviceStatus _status);
     std::string getTimestamp();
 
 protected:
+    std::string to_string(DeviceStatus _status);
     void addLog(std::string _log);
 
 signals:

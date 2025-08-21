@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Simulator</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="facial_Authorized_Try">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -26,7 +26,7 @@
     <string>Authorized</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="facial_Unauthorized_Try">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -39,7 +39,7 @@
     <string>Unauthorized</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="rfid_Authorized_Try">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -52,7 +52,7 @@
     <string>Authorized</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="rfid_Unauthorized_Try">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -65,7 +65,7 @@
     <string>Unauthorized</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="fingerprint_Authorized_Try">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -78,7 +78,7 @@
     <string>Authorized</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="fingerprint_Unauthorized_Try">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -91,7 +91,7 @@
     <string>Unauthorized</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_7">
+  <widget class="QPushButton" name="corridor_Movement_Try">
    <property name="geometry">
     <rect>
      <x>276</x>
@@ -104,7 +104,7 @@
     <string>Movement</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_9">
+  <widget class="QPushButton" name="Canteen_Smoke_Try">
    <property name="geometry">
     <rect>
      <x>276</x>
@@ -117,7 +117,7 @@
     <string>Smoke</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_11">
+  <widget class="QPushButton" name="meeting_room_Movement_Try">
    <property name="geometry">
     <rect>
      <x>276</x>

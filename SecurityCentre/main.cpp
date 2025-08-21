@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     auto rfidValidData = std::make_unique<ValidDataWrapper<int>>(validRFID);
     auto rfidAgent = std::make_shared<RFIDAgent>(2, std::move(rfidValidData));
 
-    std::vector<long> validFingerprint = { 853484584, 378473456, 237945778 };
+    std::vector<long> validFingerprint = { 853484584L, 378473456L, 237945778L };
     auto fingerprintValidData = std::make_unique<ValidDataWrapper<long>>(validFingerprint);
     auto fingerprintAgent = std::make_shared<FingerprintAgent>(3, std::move(fingerprintValidData));
 

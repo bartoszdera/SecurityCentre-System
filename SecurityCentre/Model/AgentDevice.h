@@ -12,6 +12,9 @@ public:
     virtual ~AgentDevice() = default;
 
     virtual AccessResult verifyAccess(const std::any& credentials) = 0;
+
+protected:
+    std::optional<std::string> convertToString(const std::any& value);
 };
 
 #endif // AGENTDEVICE_H

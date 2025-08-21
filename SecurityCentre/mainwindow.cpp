@@ -22,7 +22,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionOtworz_triggered()
 {
-    Simulator* simulator = new Simulator();
+    Simulator* simulator = new Simulator(storage);
     simulator->raise();
     simulator->activateWindow();
     simulator->show();

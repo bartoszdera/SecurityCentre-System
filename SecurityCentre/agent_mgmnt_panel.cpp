@@ -10,6 +10,12 @@ AgentMgmntPanel::AgentMgmntPanel(std::shared_ptr<AgentDevice> _device, QWidget *
 {
     ui->setupUi(this);
     ui->label_id->setText(QString("%1").arg(device->getId()));
+
+    auto logs = device->getLogs();
+    for (auto log : logs)
+    {
+        ui->logs_plainTextEdit->appendPlainText(QString::fromStdString(log));
+    }
 }
 
 AgentMgmntPanel::~AgentMgmntPanel()
@@ -28,11 +34,5 @@ void AgentMgmntPanel::on_changeStatus_button_clicked()
 
 void AgentMgmntPanel::handleNewLog()
 {
-    ui->logs_plainTextEdit->clear();
-
-    auto logs = device->getLogs();
-    for (auto log : logs)
-    {
-        ui->logs_plainTextEdit->appendPlainText(QString::fromStdString(log));
-    }
+        ui->logs_plainTextEdit->appendPlainText(QString::fromStdString(device->getLogs().back()));
 }
