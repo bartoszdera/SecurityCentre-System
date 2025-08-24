@@ -1,3 +1,4 @@
+#include "Model/DetectorDevice.h"
 #include "Model/ValidDataWrapper.h"
 #include "Model/DeviceStorage.h"
 #include "Model/fingerprintagent.h"
@@ -25,10 +26,17 @@ int main(int argc, char *argv[])
     auto fingerprintValidData = std::make_unique<ValidDataWrapper<long>>(validFingerprint);
     auto fingerprintAgent = std::make_shared<FingerprintAgent>(3, std::move(fingerprintValidData));
 
+    auto smokeDetector = std::make_shared<DetectorDevice>(4);
+    auto movementCorridorDetector = std::make_shared<DetectorDevice>(5);
+    auto movementConferenceRoomDetector = std::make_shared<DetectorDevice>(6);
+
     auto deviceStorage = std::make_shared<DeviceStorage>();
     deviceStorage->addDevice(facialAgent);
     deviceStorage->addDevice(rfidAgent);
     deviceStorage->addDevice(fingerprintAgent);
+    deviceStorage->addDevice(smokeDetector);
+    deviceStorage->addDevice(movementCorridorDetector);
+    deviceStorage->addDevice(movementConferenceRoomDetector);
 
     QApplication a(argc, argv);
     MainWindow w(deviceStorage);

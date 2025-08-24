@@ -32,9 +32,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         simulator.h simulator.cpp simulator.ui
-        agent_mgmnt_panel.h agent_mgmnt_panel.cpp agent_mgmnt_panel.ui
+        AgentMgmntPanel.h AgentMgmntPanel.cpp AgentMgmntPanel.ui
         Model/ElectronicDevice.h Model/ElectronicDevice.cpp
-        Model/detectordevice.h Model/detectordevice.cpp
+        Model/DetectorDevice.h Model/DetectorDevice.cpp
         Model/AgentDevice.h Model/AgentDevice.cpp
         Model/validdata.h Model/validdata.cpp
 
@@ -42,6 +42,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Model/DeviceStorage.h Model/DeviceStorage.cpp
         Model/IValidData.h
         Model/ValidDataWrapper.h
+        DetectorMgmntPanel.h DetectorMgmntPanel.cpp DetectorMgmntPanel.ui
+
 
 )
 # Define target properties for Android with Qt 6 as:

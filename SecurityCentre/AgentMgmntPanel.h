@@ -1,5 +1,5 @@
-#ifndef AGENT_MGMNT_PANEL_H
-#define AGENT_MGMNT_PANEL_H
+#ifndef AGENTMGMNTPANEL_H
+#define AGENTMGMNTPANEL_H
 
 #include "Model/AgentDevice.h"
 #include <QWidget>
@@ -28,4 +28,4 @@ private:
     std::shared_ptr<AgentDevice> device;
 };
 
-#endif // AGENT_MGMNT_PANEL_H
+#endif // AGENTMGMNTPANEL_H

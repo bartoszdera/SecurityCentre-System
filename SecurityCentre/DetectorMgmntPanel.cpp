@@ -1,15 +1,14 @@
-#include "agent_mgmnt_panel.h"
-#include "Model/AgentDevice.h"
-#include "Model/ElectronicDevice.h"
-#include "ui_agent_mgmnt_panel.h"
+#include "DetectorMgmntPanel.h"
+#include "ui_DetectorMgmntPanel.h"
 
-AgentMgmntPanel::AgentMgmntPanel(std::shared_ptr<AgentDevice> _device, QWidget *parent)
+DetectorMgmntPanel::DetectorMgmntPanel(std::shared_ptr<DetectorDevice> _device, QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::MgmntPanel)
+    , ui(new Ui::DetectorMgmntPanel)
     , device(_device)
 {
     ui->setupUi(this);
     ui->label_id->setText(QString("%1").arg(device->getId()));
+    // TODO: ustawienie poprawnego labela statusu
 
     auto logs = device->getLogs();
     for (auto log : logs)
@@ -18,12 +17,12 @@ AgentMgmntPanel::AgentMgmntPanel(std::shared_ptr<AgentDevice> _device, QWidget *
     }
 }
 
-AgentMgmntPanel::~AgentMgmntPanel()
+DetectorMgmntPanel::~DetectorMgmntPanel()
 {
     delete ui;
 }
 
-void AgentMgmntPanel::on_changeStatus_button_clicked()
+void DetectorMgmntPanel::on_changeStatus_button_clicked()
 {
     device->toggleStatus();
     QString statusText = device->getStatus() == ElectronicDevice::DeviceStatus::ON
@@ -32,7 +31,10 @@ void AgentMgmntPanel::on_changeStatus_button_clicked()
     ui->changeStatus_button->setText(QString("%1").arg(statusText));
 }
 
-void AgentMgmntPanel::handleNewLog()
+void DetectorMgmntPanel::handleNewLog()
 {
-        ui->logs_plainTextEdit->appendPlainText(QString::fromStdString(device->getLogs().back()));
+    ui->logs_plainTextEdit->appendPlainText(QString::fromStdString(device->getLogs().back()));
 }
+
+
+

@@ -29,6 +29,12 @@ private slots:
 
     void on_fingerprint_Agent_Button_clicked();
 
+    void on_smoke_Detector_Sensor_Button_clicked();
+
+    void on_motion_Corridor_Sensor_Button_clicked();
+
+    void on_motion_Conference_Room_Sensor_Button_clicked();
+
 private:
     Ui::MainWindow *ui;
     std::shared_ptr<DeviceStorage> storage;

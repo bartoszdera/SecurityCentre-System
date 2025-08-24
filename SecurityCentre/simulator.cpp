@@ -1,5 +1,6 @@
 #include "simulator.h"
 #include "Model/AgentDevice.h"
+#include "Model/DetectorDevice.h"
 #include "Model/DeviceStorage.h"
 #include "ui_simulator.h"
 #include <memory>
@@ -57,5 +58,12 @@ void Simulator::on_fingerprint_Unauthorized_Try_clicked()
 {
     auto fingerprintAgent = std::dynamic_pointer_cast<AgentDevice>(storage->getDeviceById(3));
     fingerprintAgent->verifyAccess(74358L);
+}
+
+
+void Simulator::on_Canteen_Smoke_Try_clicked()
+{
+    auto smokeDetector = std::dynamic_pointer_cast<DetectorDevice>(storage->getDeviceById(4));
+    smokeDetector->registerSignal();
 }
 

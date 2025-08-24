@@ -499,7 +499,7 @@ Agent</string>
  Agent</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="motion_Conference_Sensor_Button">
+   <widget class="QPushButton" name="motion_Conference_Room_Sensor_Button">
     <property name="geometry">
      <rect>
       <x>860</x>

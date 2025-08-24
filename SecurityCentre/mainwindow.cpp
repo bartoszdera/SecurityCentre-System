@@ -1,7 +1,9 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "Model/DetectorDevice.h"
 #include "Model/ElectronicDevice.h"
-#include "agent_mgmnt_panel.h"
+#include "AgentMgmntPanel.h"
+#include "DetectorMgmntPanel.h"
 #include "simulator.h"
 #include <memory>
 #include <qobject.h>
@@ -61,5 +63,41 @@ void MainWindow::on_fingerprint_Agent_Button_clicked()
     fingerprintAgentPanel->raise();
     fingerprintAgentPanel->activateWindow();
     fingerprintAgentPanel->show();
+}
+
+
+void MainWindow::on_smoke_Detector_Sensor_Button_clicked()
+{
+    auto device = std::dynamic_pointer_cast<DetectorDevice>(storage->getDeviceById(4));
+    DetectorMgmntPanel* smokeDetectorPanel = new DetectorMgmntPanel(device);
+    connect(device.get(), &ElectronicDevice::newLogAdded, smokeDetectorPanel, &DetectorMgmntPanel::handleNewLog);
+
+    smokeDetectorPanel->raise();
+    smokeDetectorPanel->activateWindow();
+    smokeDetectorPanel->show();
+}
+
+
+void MainWindow::on_motion_Corridor_Sensor_Button_clicked()
+{
+    auto device = std::dynamic_pointer_cast<DetectorDevice>(storage->getDeviceById(5));
+    DetectorMgmntPanel* movementCorridorDetectorPanel = new DetectorMgmntPanel(device);
+    connect(device.get(), &ElectronicDevice::newLogAdded, movementCorridorDetectorPanel, &DetectorMgmntPanel::handleNewLog);
+
+    movementCorridorDetectorPanel->raise();
+    movementCorridorDetectorPanel->activateWindow();
+    movementCorridorDetectorPanel->show();
+}
+
+
+void MainWindow::on_motion_Conference_Room_Sensor_Button_clicked()
+{
+    auto device = std::dynamic_pointer_cast<DetectorDevice>(storage->getDeviceById(6));
+    DetectorMgmntPanel* movementCnferenceRoomDetectorPanel = new DetectorMgmntPanel(device);
+    connect(device.get(), &ElectronicDevice::newLogAdded, movementCnferenceRoomDetectorPanel, &DetectorMgmntPanel::handleNewLog);
+
+    movementCnferenceRoomDetectorPanel->raise();
+    movementCnferenceRoomDetectorPanel->activateWindow();
+    movementCnferenceRoomDetectorPanel->show();
 }
 
