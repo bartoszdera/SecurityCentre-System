@@ -31,6 +31,10 @@ private slots:
 
     void on_Canteen_Smoke_Try_clicked();
 
+    void on_corridor_Movement_Try_clicked();
+
+    void on_meeting_room_Movement_Try_clicked();
+
 private:
     Ui::Simulator *ui;
     std::shared_ptr<DeviceStorage> storage;

@@ -8,17 +8,18 @@ AccessResult RFIDAgent::verifyAccess(const std::any& credentials)
 {
     if (this->getStatus() == ElectronicDevice::DeviceStatus::OFF) {
         addLog("Access: GRANTED | Agent in status: OFF");
+        emit accessGranted(getId());
         return AccessResult::GRANTED;
     }
     else {
         auto match = validRFIDs->matches(credentials);
         if (match) {
             addLog(std::format("Access: GRANTED for Credentials: {}", convertToString(credentials).value()));
-            emit RFIDAccessGranted();
+            emit accessGranted(getId());
         }
         else {
             addLog(std::format("Access: DENIED for Credentials: {}", convertToString(credentials).value()));
-            emit RFIDAccessDenied();
+            emit accessDenied(getId());
         }
         return match ? AccessResult::GRANTED : AccessResult::DENIED;
     }

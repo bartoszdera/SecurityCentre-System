@@ -1,9 +1,10 @@
+#include "Model/AgentDevice.h"
 #include "Model/DetectorDevice.h"
 #include "Model/ValidDataWrapper.h"
 #include "Model/DeviceStorage.h"
 #include "Model/fingerprintagent.h"
 #include "Model/rfidagent.h"
-#include "mainwindow.h"
+#include "MainWindow.h"
 #include "Model/facialrecognitionagent.h"
 
 #include <QApplication>
@@ -40,6 +41,18 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     MainWindow w(deviceStorage);
+    QObject::connect(facialAgent.get(), &AgentDevice::accessGranted, &w, &MainWindow::accessGranted);
+    QObject::connect(rfidAgent.get(), &AgentDevice::accessGranted,  &w, &MainWindow::accessGranted);
+    QObject::connect(fingerprintAgent.get(), &AgentDevice::accessGranted, &w, &MainWindow::accessGranted);
+
+    QObject::connect(facialAgent.get(), &AgentDevice::accessDenied, &w, &MainWindow::accessDenied);
+    QObject::connect(rfidAgent.get(), &AgentDevice::accessDenied, &w, &MainWindow::accessDenied);
+    QObject::connect(fingerprintAgent.get(), &AgentDevice::accessDenied, &w, &MainWindow::accessDenied);
+
+    QObject::connect(smokeDetector.get(), &DetectorDevice::signalRegistered, &w, &MainWindow::signalRegistered);
+    QObject::connect(movementCorridorDetector.get(), &DetectorDevice::signalRegistered, &w, &MainWindow::signalRegistered);
+    QObject::connect(movementConferenceRoomDetector.get(), &DetectorDevice::signalRegistered, &w, &MainWindow::signalRegistered);
+
     w.show();
     return a.exec();
 }

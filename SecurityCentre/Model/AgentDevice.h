@@ -4,9 +4,11 @@
 #include "ElectronicDevice.h"
 #include "Enum/accessresult.h"
 #include <any>
+#include <qtmetamacros.h>
 
 class AgentDevice : public ElectronicDevice
 {
+    Q_OBJECT
 public:
     AgentDevice(int _id);
     virtual ~AgentDevice() = default;
@@ -15,6 +17,10 @@ public:
 
 protected:
     std::optional<std::string> convertToString(const std::any& value);
+
+signals:
+    void accessGranted(int deviceId);
+    void accessDenied(int deviceId);
 };
 
 #endif // AGENTDEVICE_H

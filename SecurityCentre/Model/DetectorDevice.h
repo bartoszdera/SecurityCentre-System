@@ -13,7 +13,7 @@ public:
     void registerSignal();
 
 signals:
-    void signalRegistered();
+    void signalRegistered(int deviceId);
 };
 
 #endif // DETECTORDEVICE_H

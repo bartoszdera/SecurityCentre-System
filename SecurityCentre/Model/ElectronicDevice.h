@@ -13,11 +13,12 @@ class ElectronicDevice : public QObject
 public:
     enum class DeviceStatus{ OFF=0, ON=1 };
     ElectronicDevice(int _id);
+    int getId() const;
     void setStatus(DeviceStatus _status);
     void toggleStatus();
-    int getId() const;
-    std::vector<std::string> getLogs() const;
     DeviceStatus getStatus();
+    std::string to_string(DeviceStatus _status);
+    std::vector<std::string> getLogs() const;
 
 private:
     const int id;
@@ -26,7 +27,6 @@ private:
     std::string getTimestamp();
 
 protected:
-    std::string to_string(DeviceStatus _status);
     void addLog(std::string _log);
 
 signals:

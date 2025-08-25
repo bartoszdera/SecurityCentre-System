@@ -8,7 +8,7 @@ void DetectorDevice::registerSignal()
 {
     if(getStatus() == ElectronicDevice::DeviceStatus::ON) {
         addLog("Signal registered.");
-        emit signalRegistered();
+        emit signalRegistered(getId());
     }
 }
 

@@ -10,7 +10,7 @@ AgentMgmntPanel::AgentMgmntPanel(std::shared_ptr<AgentDevice> _device, QWidget *
 {
     ui->setupUi(this);
     ui->label_id->setText(QString("%1").arg(device->getId()));
-    // TODO: ustawienie poprawnego labela statusu
+    ui->changeStatus_button->setText(QString("%1").arg(QString::fromStdString(device->to_string(device->getStatus()))));
 
     auto logs = device->getLogs();
     for (auto log : logs)

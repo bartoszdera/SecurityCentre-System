@@ -8,17 +8,18 @@ AccessResult FacialRecognitionAgent::verifyAccess(const std::any& credentials)
 {
     if (this->getStatus() == ElectronicDevice::DeviceStatus::OFF) {
         addLog("Access: GRANTED | Agent in status: OFF");
+        emit accessGranted(getId());
         return AccessResult::GRANTED;
     }
     else {
         auto match = validFacials->matches(credentials);
         if (match) {
             addLog(std::format("Access: GRANTED for Credentials: {}", convertToString(credentials).value()));
-            emit facialAccessGranted();
+            emit accessGranted(getId());
         }
         else {
             addLog(std::format("Access: DENIED for Credentials: {}", convertToString(credentials).value()));
-            emit facialAccessDenied();
+            emit accessDenied(getId());
         }
         return match ? AccessResult::GRANTED : AccessResult::DENIED;
     }

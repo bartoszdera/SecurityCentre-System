@@ -16,10 +16,6 @@ private:
 public:
     RFIDAgent(int _id, std::unique_ptr<IValidData> _validRFIDs);
     AccessResult verifyAccess(const std::any& credentials) override;
-
-signals:
-    void RFIDAccessGranted();
-    void RFIDAccessDenied();
 };
 
 #endif // RFIDAGENT_H

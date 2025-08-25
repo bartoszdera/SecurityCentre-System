@@ -16,16 +16,13 @@ public:
     explicit AgentMgmntPanel(std::shared_ptr<AgentDevice> _device, QWidget *parent = nullptr);
     ~AgentMgmntPanel();
 
-signals:
-    void temp(int argument);
+private:
+    Ui::MgmntPanel *ui;
+    std::shared_ptr<AgentDevice> device;
 
 public slots:
     void on_changeStatus_button_clicked();
     void handleNewLog();
-
-private:
-    Ui::MgmntPanel *ui;
-    std::shared_ptr<AgentDevice> device;
 };
 
 #endif // AGENTMGMNTPANEL_H

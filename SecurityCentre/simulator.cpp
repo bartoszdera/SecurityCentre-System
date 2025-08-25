@@ -67,3 +67,17 @@ void Simulator::on_Canteen_Smoke_Try_clicked()
     smokeDetector->registerSignal();
 }
 
+
+void Simulator::on_corridor_Movement_Try_clicked()
+{
+    auto corridorMotionDetector = std::dynamic_pointer_cast<DetectorDevice>(storage->getDeviceById(5));
+    corridorMotionDetector->registerSignal();
+}
+
+
+void Simulator::on_meeting_room_Movement_Try_clicked()
+{
+    auto conferenceRoomMotionDetector = std::dynamic_pointer_cast<DetectorDevice>(storage->getDeviceById(6));
+    conferenceRoomMotionDetector->registerSignal();
+}
+
