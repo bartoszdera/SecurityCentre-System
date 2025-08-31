@@ -1,0 +1,104 @@
+\doxysection{Valid\+Data\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_valid_data}{}\label{class_valid_data}\index{ValidData$<$ T $>$@{ValidData$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Valid\+Data.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_valid_data_aa7e54933be2f459a493a426f99e6c24a}{Valid\+Data}} (std\+::vector$<$ T $>$ \+\_\+data)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_valid_data_ac4cf10ac6e11f58a4fc88aa494ea2e61}{set\+Data}} (std\+::vector$<$ T $>$ \+\_\+data)
+\item 
+void \mbox{\hyperlink{class_valid_data_a8762b2abe174e45c6a70f7214ece5f6b}{add\+Data}} (T \+\_\+data\+Unit)
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{class_valid_data_a66cf8fdb3de64c090bf37edea5baa946}{get\+Data}} ()
+\item 
+bool \mbox{\hyperlink{class_valid_data_a35bb4a7a5f7d31421d363cc04d1c79e3}{matches}} (T to\+Match) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Valid\+Data$<$ T $>$}
+\doxylink{class_valid_data}{Valid\+Data} class implementing methods to manage a collection of valid data entries. 
+
+\label{doc-constructors}
+\Hypertarget{class_valid_data_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_valid_data_aa7e54933be2f459a493a426f99e6c24a}\index{ValidData$<$ T $>$@{ValidData$<$ T $>$}!ValidData@{ValidData}}
+\index{ValidData@{ValidData}!ValidData$<$ T $>$@{ValidData$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ValidData()}{ValidData()}}
+{\footnotesize\ttfamily \label{class_valid_data_aa7e54933be2f459a493a426f99e6c24a} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_valid_data}{Valid\+Data}}$<$ T $>$\mbox{\hyperlink{class_valid_data}{\+::\+Valid\+Data}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{\+\_\+data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & A vector of type T representing the initial valid data entries \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_valid_data_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_valid_data_a8762b2abe174e45c6a70f7214ece5f6b}\index{ValidData$<$ T $>$@{ValidData$<$ T $>$}!addData@{addData}}
+\index{addData@{addData}!ValidData$<$ T $>$@{ValidData$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addData()}{addData()}}
+{\footnotesize\ttfamily \label{class_valid_data_a8762b2abe174e45c6a70f7214ece5f6b} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_valid_data}{Valid\+Data}}$<$ T $>$\+::add\+Data (\begin{DoxyParamCaption}\item[{T}]{\+\_\+data\+Unit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to add a single valid data entry. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data\+Unit} & A data entry of type T to be added to the valid data entries \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_valid_data_a66cf8fdb3de64c090bf37edea5baa946}\index{ValidData$<$ T $>$@{ValidData$<$ T $>$}!getData@{getData}}
+\index{getData@{getData}!ValidData$<$ T $>$@{ValidData$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \label{class_valid_data_a66cf8fdb3de64c090bf37edea5baa946} 
+template$<$typename T$>$ \\
+std\+::vector$<$ T $>$ \mbox{\hyperlink{class_valid_data}{Valid\+Data}}$<$ T $>$\+::get\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to get the valid data entries. \begin{DoxyReturn}{Returns}
+A vector of type T representing the valid data entries 
+\end{DoxyReturn}
+\Hypertarget{class_valid_data_a35bb4a7a5f7d31421d363cc04d1c79e3}\index{ValidData$<$ T $>$@{ValidData$<$ T $>$}!matches@{matches}}
+\index{matches@{matches}!ValidData$<$ T $>$@{ValidData$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{matches()}{matches()}}
+{\footnotesize\ttfamily \label{class_valid_data_a35bb4a7a5f7d31421d363cc04d1c79e3} 
+template$<$typename T$>$ \\
+bool \mbox{\hyperlink{class_valid_data}{Valid\+Data}}$<$ T $>$\+::matches (\begin{DoxyParamCaption}\item[{T}]{to\+Match}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to check if a given data entry matches any of the valid data entries. 
+\begin{DoxyParams}{Parameters}
+{\em to\+Match} & A data entry of type T to be checked against the valid data entries \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean value indicating whether the given data entry matches any of the valid data entries 
+\end{DoxyReturn}
+\Hypertarget{class_valid_data_ac4cf10ac6e11f58a4fc88aa494ea2e61}\index{ValidData$<$ T $>$@{ValidData$<$ T $>$}!setData@{setData}}
+\index{setData@{setData}!ValidData$<$ T $>$@{ValidData$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily \label{class_valid_data_ac4cf10ac6e11f58a4fc88aa494ea2e61} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_valid_data}{Valid\+Data}}$<$ T $>$\+::set\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{\+\_\+data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to set the valid data entries. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & A vector of type T representing the new valid data entries \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/\+Model/Valid\+Data.\+h\end{DoxyCompactItemize}

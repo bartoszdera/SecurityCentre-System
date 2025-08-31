@@ -1,0 +1,37 @@
+\doxysection{Detector\+Mgmnt\+Panel.\+h}
+\hypertarget{_detector_mgmnt_panel_8h_source}{}\label{_detector_mgmnt_panel_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/DetectorMgmntPanel.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/DetectorMgmntPanel.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DETECTORMGMNTPANEL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DETECTORMGMNTPANEL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Model/DetectorDevice.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_detector_mgmnt_panel}{DetectorMgmntPanel}};}
+\DoxyCodeLine{00010\ \}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_detector_mgmnt_panel_af48059ea77df9028884d5ab07150e67b}{DetectorMgmntPanel}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_detector_mgmnt_panel_af48059ea77df9028884d5ab07150e67b}{DetectorMgmntPanel}}(std::shared\_ptr<DetectorDevice>\ \_device,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_detector_mgmnt_panel_aea517152c342206e281347c01b00fbcb}{\string~DetectorMgmntPanel}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_detector_mgmnt_panel}{Ui::DetectorMgmntPanel}}\ *ui;}
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<DetectorDevice>\ device;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ handleNewLog();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_changeStatus\_button\_clicked();}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DETECTORMGMNTPANEL\_H}}
+
+\end{DoxyCode}

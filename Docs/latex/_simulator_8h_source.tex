@@ -1,0 +1,51 @@
+\doxysection{Simulator.\+h}
+\hypertarget{_simulator_8h_source}{}\label{_simulator_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/Simulator.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/Simulator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SIMULATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SIMULATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Model/DeviceStorage.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_simulator}{Simulator}};}
+\DoxyCodeLine{00009\ \}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_simulator_a30f750889a129deae3be8c35da1d9365}{Simulator}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_simulator_a30f750889a129deae3be8c35da1d9365}{Simulator}}(std::shared\_ptr<DeviceStorage>\ \_storage,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_simulator_a0f49aa04f42060a785adf77346b9de9f}{\string~Simulator}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_facial\_Authorized\_Try\_clicked();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_facial\_Unauthorized\_Try\_clicked();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_rfid\_Authorized\_Try\_clicked();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_rfid\_Unauthorized\_Try\_clicked();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_fingerprint\_Authorized\_Try\_clicked();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_fingerprint\_Unauthorized\_Try\_clicked();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_Canteen\_Smoke\_Try\_clicked();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_corridor\_Movement\_Try\_clicked();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_meeting\_room\_Movement\_Try\_clicked();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_simulator}{Ui::Simulator}}\ *ui;}
+\DoxyCodeLine{00050\ \ \ \ \ std::shared\_ptr<DeviceStorage>\ storage;}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SIMULATOR\_H}}
+
+\end{DoxyCode}

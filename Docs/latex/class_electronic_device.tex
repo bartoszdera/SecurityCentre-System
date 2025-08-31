@@ -1,0 +1,162 @@
+\doxysection{Electronic\+Device Class Reference}
+\hypertarget{class_electronic_device}{}\label{class_electronic_device}\index{ElectronicDevice@{ElectronicDevice}}
+
+
+{\ttfamily \#include $<$Electronic\+Device.\+h$>$}
+
+Inheritance diagram for Electronic\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_electronic_device}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \{ {\bfseries OFF} =0
+, {\bfseries ON} =1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_electronic_device_a012c4064ee0c58cae292299165568182}\label{class_electronic_device_a012c4064ee0c58cae292299165568182} 
+void {\bfseries new\+Log\+Added} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_electronic_device_a0fe0129f6c78dd247ceb029fbcaa1f64}{Electronic\+Device}} (int \+\_\+id)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_electronic_device_a61f971472527647414a9235abf07b96d}{get\+Id}} () const
+\item 
+void \mbox{\hyperlink{class_electronic_device_ab889ce06d24dc52ea94f538a9bc29186}{set\+Status}} (\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \+\_\+status)
+\item 
+void \mbox{\hyperlink{class_electronic_device_aca9ec00c257d6ad3e63b0340fbdb7033}{toggle\+Status}} ()
+\item 
+\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \mbox{\hyperlink{class_electronic_device_a970642dda36303988564f7f01e8e09c7}{get\+Status}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_electronic_device_a925a933503935740b27f29829579f8b5}{to\+\_\+string}} (\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \+\_\+status)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_electronic_device_a506024359d48a31e1248da10ae72f8d3}{get\+Logs}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_electronic_device_ae6839b22c8ca975dc4f966c1c10540c7}{add\+Log}} (std\+::string \+\_\+log)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_electronic_device}{Electronic\+Device} class implementing methods and attributes common to all electronic devices. This is the base class for all specific device types. 
+
+\label{doc-enum-members}
+\Hypertarget{class_electronic_device_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}\index{ElectronicDevice@{ElectronicDevice}!DeviceStatus@{DeviceStatus}}
+\index{DeviceStatus@{DeviceStatus}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{DeviceStatus}{DeviceStatus}}
+{\footnotesize\ttfamily \label{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170} 
+enum class \mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Electronic\+Device\+::\+Device\+Status}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\doxylink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status} enum representing the status of the device. 
+
+\label{doc-constructors}
+\Hypertarget{class_electronic_device_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_electronic_device_a0fe0129f6c78dd247ceb029fbcaa1f64}\index{ElectronicDevice@{ElectronicDevice}!ElectronicDevice@{ElectronicDevice}}
+\index{ElectronicDevice@{ElectronicDevice}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{ElectronicDevice()}{ElectronicDevice()}}
+{\footnotesize\ttfamily \label{class_electronic_device_a0fe0129f6c78dd247ceb029fbcaa1f64} 
+Electronic\+Device\+::\+Electronic\+Device (\begin{DoxyParamCaption}\item[{int}]{\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & An integer representing the unique identifier of the device \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_electronic_device_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_electronic_device_ae6839b22c8ca975dc4f966c1c10540c7}\index{ElectronicDevice@{ElectronicDevice}!addLog@{addLog}}
+\index{addLog@{addLog}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{addLog()}{addLog()}}
+{\footnotesize\ttfamily \label{class_electronic_device_ae6839b22c8ca975dc4f966c1c10540c7} 
+void Electronic\+Device\+::add\+Log (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+log}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Method to add a log entry to the device\textquotesingle{}s logs. Method pushes a new log entry to the logs vector and emits the new\+Log\+Added signal. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+log} & A string representing the log entry to be added \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_electronic_device_a61f971472527647414a9235abf07b96d}\index{ElectronicDevice@{ElectronicDevice}!getId@{getId}}
+\index{getId@{getId}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{class_electronic_device_a61f971472527647414a9235abf07b96d} 
+int Electronic\+Device\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Method to get the identifier of the device. \begin{DoxyReturn}{Returns}
+An integer representing the identifier of the device 
+\end{DoxyReturn}
+\Hypertarget{class_electronic_device_a506024359d48a31e1248da10ae72f8d3}\index{ElectronicDevice@{ElectronicDevice}!getLogs@{getLogs}}
+\index{getLogs@{getLogs}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{getLogs()}{getLogs()}}
+{\footnotesize\ttfamily \label{class_electronic_device_a506024359d48a31e1248da10ae72f8d3} 
+std\+::vector$<$ std\+::string $>$ Electronic\+Device\+::get\+Logs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Method to get the logs of the device. \begin{DoxyReturn}{Returns}
+A vector of strings representing the logs of the device 
+\end{DoxyReturn}
+\Hypertarget{class_electronic_device_a970642dda36303988564f7f01e8e09c7}\index{ElectronicDevice@{ElectronicDevice}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \label{class_electronic_device_a970642dda36303988564f7f01e8e09c7} 
+\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Electronic\+Device\+::\+Device\+Status}} Electronic\+Device\+::get\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Method to get the current status of the device. \begin{DoxyReturn}{Returns}
+A \doxylink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status} enum value representing the current status of the device 
+\end{DoxyReturn}
+\Hypertarget{class_electronic_device_ab889ce06d24dc52ea94f538a9bc29186}\index{ElectronicDevice@{ElectronicDevice}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily \label{class_electronic_device_ab889ce06d24dc52ea94f538a9bc29186} 
+void Electronic\+Device\+::set\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}}}]{\+\_\+status}{}\end{DoxyParamCaption})}
+
+Method to set the status of the device. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+status} & A \doxylink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status} enum value representing the new status of the device \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_electronic_device_a925a933503935740b27f29829579f8b5}\index{ElectronicDevice@{ElectronicDevice}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily \label{class_electronic_device_a925a933503935740b27f29829579f8b5} 
+std\+::string Electronic\+Device\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}}}]{\+\_\+status}{}\end{DoxyParamCaption})}
+
+Method to convert a \doxylink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status} enum value to its string representation. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+status} & A \doxylink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status} enum value to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representing the \doxylink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status} enum value 
+\end{DoxyReturn}
+\Hypertarget{class_electronic_device_aca9ec00c257d6ad3e63b0340fbdb7033}\index{ElectronicDevice@{ElectronicDevice}!toggleStatus@{toggleStatus}}
+\index{toggleStatus@{toggleStatus}!ElectronicDevice@{ElectronicDevice}}
+\doxysubsubsection{\texorpdfstring{toggleStatus()}{toggleStatus()}}
+{\footnotesize\ttfamily \label{class_electronic_device_aca9ec00c257d6ad3e63b0340fbdb7033} 
+void Electronic\+Device\+::toggle\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Method to toggle the status of the device between ON and OFF. It changes the status of the device to the opposite to the current status. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/\+Model/Electronic\+Device.\+h\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/build-\/\+Security\+Centre-\/\+Desktop-\/\+Debug/\+Security\+Centre\+\_\+autogen/\+EXHL2\+H62\+WB/moc\+\_\+\+Electronic\+Device.\+cpp\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/\+Model/Electronic\+Device.\+cpp\end{DoxyCompactItemize}

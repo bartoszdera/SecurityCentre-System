@@ -1,0 +1,74 @@
+\doxysection{Valid\+Data\+Wrapper\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_valid_data_wrapper}{}\label{class_valid_data_wrapper}\index{ValidDataWrapper$<$ T $>$@{ValidDataWrapper$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Valid\+Data\+Wrapper.\+h$>$}
+
+Inheritance diagram for Valid\+Data\+Wrapper\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_valid_data_wrapper}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_valid_data_wrapper_a451998c2af479ebd86fd9614deac399e}{Valid\+Data\+Wrapper}} (const std\+::vector$<$ T $>$ \&\+\_\+data)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_valid_data_wrapper_a24b6a586fde0c3d276c7a177b4c3f992}{matches}} (const std\+::any \&to\+Match) const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Valid\+Data\+Wrapper$<$ T $>$}
+Template class that allows the use of \doxylink{class_valid_data}{Valid\+Data} with different data types while providing a common interface. 
+
+\label{doc-constructors}
+\Hypertarget{class_valid_data_wrapper_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_valid_data_wrapper_a451998c2af479ebd86fd9614deac399e}\index{ValidDataWrapper$<$ T $>$@{ValidDataWrapper$<$ T $>$}!ValidDataWrapper@{ValidDataWrapper}}
+\index{ValidDataWrapper@{ValidDataWrapper}!ValidDataWrapper$<$ T $>$@{ValidDataWrapper$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ValidDataWrapper()}{ValidDataWrapper()}}
+{\footnotesize\ttfamily \label{class_valid_data_wrapper_a451998c2af479ebd86fd9614deac399e} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_valid_data_wrapper}{Valid\+Data\+Wrapper}}$<$ T $>$\mbox{\hyperlink{class_valid_data_wrapper}{\+::\+Valid\+Data\+Wrapper}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{\+\_\+data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & A vector of type T representing the valid data \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_valid_data_wrapper_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_valid_data_wrapper_a24b6a586fde0c3d276c7a177b4c3f992}\index{ValidDataWrapper$<$ T $>$@{ValidDataWrapper$<$ T $>$}!matches@{matches}}
+\index{matches@{matches}!ValidDataWrapper$<$ T $>$@{ValidDataWrapper$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{matches()}{matches()}}
+{\footnotesize\ttfamily \label{class_valid_data_wrapper_a24b6a586fde0c3d276c7a177b4c3f992} 
+template$<$typename T$>$ \\
+bool \mbox{\hyperlink{class_valid_data_wrapper}{Valid\+Data\+Wrapper}}$<$ T $>$\+::matches (\begin{DoxyParamCaption}\item[{const std\+::any \&}]{to\+Match}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method to check if the provided data matches any of the valid data. 
+\begin{DoxyParams}{Parameters}
+{\em to\+Match} & A std\+::any object representing the data to be matched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the data matches any of the valid data 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_valid_data_ac804db743069b3a2c2980f3bc871ccea}{IValid\+Data}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/\+Model/Valid\+Data\+Wrapper.\+h\end{DoxyCompactItemize}

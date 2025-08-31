@@ -1,0 +1,122 @@
+\doxysection{RFIDAgent Class Reference}
+\hypertarget{class_r_f_i_d_agent}{}\label{class_r_f_i_d_agent}\index{RFIDAgent@{RFIDAgent}}
+
+
+{\ttfamily \#include $<$RFIDAgent.\+h$>$}
+
+Inheritance diagram for RFIDAgent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_r_f_i_d_agent}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_f_i_d_agent_a60bcd728623a714eade7ff23ee48966b}{RFIDAgent}} (int \+\_\+id, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_valid_data}{IValid\+Data}} $>$ \+\_\+valid\+RFIDs)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+Access\+Result \mbox{\hyperlink{class_r_f_i_d_agent_a2972379fa8580b2d502f8e1ff26189f5}{verify\+Access}} (const std\+::any \&credentials) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_agent_device}{Agent\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_agent_device_a1e28c340986acc94eb4f4c7f31254cab}{Agent\+Device}} (int \+\_\+id)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_electronic_device}{Electronic\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_electronic_device_a0fe0129f6c78dd247ceb029fbcaa1f64}{Electronic\+Device}} (int \+\_\+id)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_electronic_device_a61f971472527647414a9235abf07b96d}{get\+Id}} () const
+\item 
+void \mbox{\hyperlink{class_electronic_device_ab889ce06d24dc52ea94f538a9bc29186}{set\+Status}} (\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \+\_\+status)
+\item 
+void \mbox{\hyperlink{class_electronic_device_aca9ec00c257d6ad3e63b0340fbdb7033}{toggle\+Status}} ()
+\item 
+\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \mbox{\hyperlink{class_electronic_device_a970642dda36303988564f7f01e8e09c7}{get\+Status}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_electronic_device_a925a933503935740b27f29829579f8b5}{to\+\_\+string}} (\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \+\_\+status)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_electronic_device_a506024359d48a31e1248da10ae72f8d3}{get\+Logs}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_electronic_device}{Electronic\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \{ {\bfseries OFF} =0
+, {\bfseries ON} =1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals inherited from \mbox{\hyperlink{class_agent_device}{Agent\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries access\+Granted} (int device\+Id)
+\item 
+void {\bfseries access\+Denied} (int device\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals inherited from \mbox{\hyperlink{class_electronic_device}{Electronic\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries new\+Log\+Added} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_agent_device}{Agent\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{class_agent_device_ac3794581845d344c63c14c3e69236643}{convert\+To\+String}} (const std\+::any \&value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_electronic_device}{Electronic\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_electronic_device_ae6839b22c8ca975dc4f966c1c10540c7}{add\+Log}} (std\+::string \+\_\+log)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_r_f_i_d_agent}{RFIDAgent} class implementing methods and attributes specific to RFID agents. 
+
+\label{doc-constructors}
+\Hypertarget{class_r_f_i_d_agent_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_r_f_i_d_agent_a60bcd728623a714eade7ff23ee48966b}\index{RFIDAgent@{RFIDAgent}!RFIDAgent@{RFIDAgent}}
+\index{RFIDAgent@{RFIDAgent}!RFIDAgent@{RFIDAgent}}
+\doxysubsubsection{\texorpdfstring{RFIDAgent()}{RFIDAgent()}}
+{\footnotesize\ttfamily \label{class_r_f_i_d_agent_a60bcd728623a714eade7ff23ee48966b} 
+RFIDAgent\+::\+RFIDAgent (\begin{DoxyParamCaption}\item[{int}]{\+\_\+id}{, }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_valid_data}{IValid\+Data}} $>$}]{\+\_\+valid\+RFIDs}{}\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & An integer representing the identifier of the RFID agent \\
+\hline
+{\em \+\_\+valid\+RFIDs} & A unique pointer to an \doxylink{class_i_valid_data}{IValid\+Data} object containing valid RFID data \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_r_f_i_d_agent_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_r_f_i_d_agent_a2972379fa8580b2d502f8e1ff26189f5}\index{RFIDAgent@{RFIDAgent}!verifyAccess@{verifyAccess}}
+\index{verifyAccess@{verifyAccess}!RFIDAgent@{RFIDAgent}}
+\doxysubsubsection{\texorpdfstring{verifyAccess()}{verifyAccess()}}
+{\footnotesize\ttfamily \label{class_r_f_i_d_agent_a2972379fa8580b2d502f8e1ff26189f5} 
+Access\+Result RFIDAgent\+::verify\+Access (\begin{DoxyParamCaption}\item[{const std\+::any \&}]{credentials}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method to verify access based on provided RFID credentials. 
+\begin{DoxyParams}{Parameters}
+{\em credentials} & An object of type std\+::any containing the RFID credentials to be verified \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_agent_device_ad7b515cc04fdd6e9e4208c2b037e9cd8}{Agent\+Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/\+Model/RFIDAgent.\+h\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/\+Model/RFIDAgent.\+cpp\end{DoxyCompactItemize}

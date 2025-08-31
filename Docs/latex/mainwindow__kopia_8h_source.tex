@@ -1,0 +1,45 @@
+\doxysection{mainwindow\+\_\+kopia.\+h}
+\hypertarget{mainwindow__kopia_8h_source}{}\label{mainwindow__kopia_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/copied\_files/mainwindow\_kopia.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/copied\_files/mainwindow\_kopia.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_KOPIA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_KOPIA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Model/agent.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}};}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }MainWindow\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ MainWindow(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ choosenAgentID(std::string\ idValue);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ choosenAgentInfo(std::string\ infoValue);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ choosenAgentState(\textcolor{keywordtype}{bool}\ stateValue);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ choosenAgentLogs(std::vector<std::string>\ logsValue);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ signals:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ agentChoosen(\textcolor{keywordtype}{int}\ arg1);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ agentStateChanged(\textcolor{keywordtype}{int}\ arg1);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_button\_ChangeAgentState\_clicked();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_spinBox\_agentChoice\_valueChanged(\textcolor{keywordtype}{int}\ arg1);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_main_window}{Ui::MainWindow}}\ *ui;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_KOPIA\_H}}
+
+\end{DoxyCode}

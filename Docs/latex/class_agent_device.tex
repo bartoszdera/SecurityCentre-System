@@ -1,0 +1,135 @@
+\doxysection{Agent\+Device Class Reference}
+\hypertarget{class_agent_device}{}\label{class_agent_device}\index{AgentDevice@{AgentDevice}}
+
+
+{\ttfamily \#include $<$Agent\+Device.\+h$>$}
+
+Inheritance diagram for Agent\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_agent_device}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_agent_device_a0375fd8194ae04d6f275f8cab10a9d23}\label{class_agent_device_a0375fd8194ae04d6f275f8cab10a9d23} 
+void {\bfseries access\+Granted} (int device\+Id)
+\item 
+\Hypertarget{class_agent_device_a439f7d9e328425365eadfa62cbe27959}\label{class_agent_device_a439f7d9e328425365eadfa62cbe27959} 
+void {\bfseries access\+Denied} (int device\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals inherited from \mbox{\hyperlink{class_electronic_device}{Electronic\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries new\+Log\+Added} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_agent_device_a1e28c340986acc94eb4f4c7f31254cab}{Agent\+Device}} (int \+\_\+id)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+virtual Access\+Result \mbox{\hyperlink{class_agent_device_ad7b515cc04fdd6e9e4208c2b037e9cd8}{verify\+Access}} (const std\+::any \&credentials)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_electronic_device}{Electronic\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_electronic_device_a0fe0129f6c78dd247ceb029fbcaa1f64}{Electronic\+Device}} (int \+\_\+id)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_electronic_device_a61f971472527647414a9235abf07b96d}{get\+Id}} () const
+\item 
+void \mbox{\hyperlink{class_electronic_device_ab889ce06d24dc52ea94f538a9bc29186}{set\+Status}} (\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \+\_\+status)
+\item 
+void \mbox{\hyperlink{class_electronic_device_aca9ec00c257d6ad3e63b0340fbdb7033}{toggle\+Status}} ()
+\item 
+\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \mbox{\hyperlink{class_electronic_device_a970642dda36303988564f7f01e8e09c7}{get\+Status}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_electronic_device_a925a933503935740b27f29829579f8b5}{to\+\_\+string}} (\mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \+\_\+status)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_electronic_device_a506024359d48a31e1248da10ae72f8d3}{get\+Logs}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{class_agent_device_ac3794581845d344c63c14c3e69236643}{convert\+To\+String}} (const std\+::any \&value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_electronic_device}{Electronic\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_electronic_device_ae6839b22c8ca975dc4f966c1c10540c7}{add\+Log}} (std\+::string \+\_\+log)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_electronic_device}{Electronic\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_electronic_device_a909743b71b399ae3f20c7fb0fd182170}{Device\+Status}} \{ {\bfseries OFF} =0
+, {\bfseries ON} =1
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_agent_device}{Agent\+Device} class is an abstract class representing devices that can verify access credentials. 
+
+\label{doc-constructors}
+\Hypertarget{class_agent_device_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_agent_device_a1e28c340986acc94eb4f4c7f31254cab}\index{AgentDevice@{AgentDevice}!AgentDevice@{AgentDevice}}
+\index{AgentDevice@{AgentDevice}!AgentDevice@{AgentDevice}}
+\doxysubsubsection{\texorpdfstring{AgentDevice()}{AgentDevice()}}
+{\footnotesize\ttfamily \label{class_agent_device_a1e28c340986acc94eb4f4c7f31254cab} 
+Agent\+Device\+::\+Agent\+Device (\begin{DoxyParamCaption}\item[{int}]{\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & An integer representing the identifier of the device \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_agent_device_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_agent_device_ac3794581845d344c63c14c3e69236643}\index{AgentDevice@{AgentDevice}!convertToString@{convertToString}}
+\index{convertToString@{convertToString}!AgentDevice@{AgentDevice}}
+\doxysubsubsection{\texorpdfstring{convertToString()}{convertToString()}}
+{\footnotesize\ttfamily \label{class_agent_device_ac3794581845d344c63c14c3e69236643} 
+std\+::optional$<$ std\+::string $>$ Agent\+Device\+::convert\+To\+String (\begin{DoxyParamCaption}\item[{const std\+::any \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Helper method to convert std\+::any to std\+::string if possible. 
+\begin{DoxyParams}{Parameters}
+{\em value} & An object of type std\+::any to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An optional string containing the converted value, or std\+::nullopt if conversion fails 
+\end{DoxyReturn}
+\Hypertarget{class_agent_device_ad7b515cc04fdd6e9e4208c2b037e9cd8}\index{AgentDevice@{AgentDevice}!verifyAccess@{verifyAccess}}
+\index{verifyAccess@{verifyAccess}!AgentDevice@{AgentDevice}}
+\doxysubsubsection{\texorpdfstring{verifyAccess()}{verifyAccess()}}
+{\footnotesize\ttfamily \label{class_agent_device_ad7b515cc04fdd6e9e4208c2b037e9cd8} 
+virtual Access\+Result Agent\+Device\+::verify\+Access (\begin{DoxyParamCaption}\item[{const std\+::any \&}]{credentials}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Virtual method to implement access credentials way of verifiaction. 
+\begin{DoxyParams}{Parameters}
+{\em credentials} & An object of type std\+::any representing the credentials to be verified \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An Access\+Result enum value representing the result of the access verification 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_facial_recognition_agent_ab0c47a0aac308b83a9ff644e0482e714}{Facial\+Recognition\+Agent}}, \mbox{\hyperlink{class_fingerprint_agent_a452227bf8063c974579da1b7fbcbe926}{Fingerprint\+Agent}}, and \mbox{\hyperlink{class_r_f_i_d_agent_a2972379fa8580b2d502f8e1ff26189f5}{RFIDAgent}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/\+Model/Agent\+Device.\+h\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/build-\/\+Security\+Centre-\/\+Desktop-\/\+Debug/\+Security\+Centre\+\_\+autogen/\+EXHL2\+H62\+WB/moc\+\_\+\+Agent\+Device.\+cpp\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/\+Model/Agent\+Device.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,48 @@
+\doxysection{Valid\+Data.\+h}
+\hypertarget{_valid_data_8h_source}{}\label{_valid_data_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/Model/ValidData.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/Model/ValidData.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VALIDDATA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VALIDDATA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_valid_data_aa7e54933be2f459a493a426f99e6c24a}{ValidData}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_valid_data_aa7e54933be2f459a493a426f99e6c24a}{ValidData}}(std::vector<T>\ \_data)\ :\ data(\_data)\ \{\};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_valid_data_ac4cf10ac6e11f58a4fc88aa494ea2e61}{setData}}(std::vector<T>\ \_data)}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ data\ =\ \_data;}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_valid_data_a8762b2abe174e45c6a70f7214ece5f6b}{addData}}(T\ \_dataUnit)}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ data.push\_back(\_dataUnit);}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::vector<T>\ \mbox{\hyperlink{class_valid_data_a66cf8fdb3de64c090bf37edea5baa946}{getData}}()}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_valid_data_a35bb4a7a5f7d31421d363cc04d1c79e3}{matches}}(T\ toMatch)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ dataUnit\ :\ data)\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dataUnit\ ==\ toMatch)\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ std::vector<T>\ data;}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VALIDDATA\_H}}
+
+\end{DoxyCode}

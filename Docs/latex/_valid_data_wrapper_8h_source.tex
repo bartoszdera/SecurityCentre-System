@@ -1,0 +1,33 @@
+\doxysection{Valid\+Data\+Wrapper.\+h}
+\hypertarget{_valid_data_wrapper_8h_source}{}\label{_valid_data_wrapper_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/Model/ValidDataWrapper.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/Model/ValidDataWrapper.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VALIDDATAWRAPPER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VALIDDATAWRAPPER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IValidData.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ValidData.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_valid_data_wrapper_a451998c2af479ebd86fd9614deac399e}{ValidDataWrapper}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_valid_data}{IValidData}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_valid_data_wrapper_a451998c2af479ebd86fd9614deac399e}{ValidDataWrapper}}(\textcolor{keyword}{const}\ std::vector<T>\&\ \_data)\ :\ validData(\_data)\ \{\}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_valid_data_wrapper_a24b6a586fde0c3d276c7a177b4c3f992}{matches}}(\textcolor{keyword}{const}\ std::any\&\ toMatch)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toMatch.type()\ !=\ \textcolor{keyword}{typeid}(T))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\&\ value\ =\ std::any\_cast<const\ T\&>(toMatch);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ validData.matches(value);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::bad\_any\_cast\&)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_valid_data}{ValidData<T>}}\ validData;}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VALIDDATAWRAPPER\_H}}
+
+\end{DoxyCode}

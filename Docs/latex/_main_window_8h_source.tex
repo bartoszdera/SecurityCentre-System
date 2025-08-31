@@ -1,0 +1,49 @@
+\doxysection{Main\+Window.\+h}
+\hypertarget{_main_window_8h_source}{}\label{_main_window_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/MainWindow.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/MainWindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Model/DeviceStorage.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}};}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ MainWindow(std::shared\_ptr<DeviceStorage>\ \_storage,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_main_window}{Ui::MainWindow}}\ *ui;}
+\DoxyCodeLine{00034\ \ \ \ \ std::shared\_ptr<DeviceStorage>\ storage;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_actionOtworz\_triggered();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_facialRec\_Agent\_Button\_clicked();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_rfid\_Agent\_Button\_clicked();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_fingerprint\_Agent\_Button\_clicked();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_smoke\_Detector\_Sensor\_Button\_clicked();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_motion\_Corridor\_Sensor\_Button\_clicked();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_motion\_Conference\_Room\_Sensor\_Button\_clicked();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ accessGranted(\textcolor{keywordtype}{int}\ deviceId);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ accessDenied(\textcolor{keywordtype}{int}\ deviceId);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ signalRegistered(\textcolor{keywordtype}{int}\ deviceId);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

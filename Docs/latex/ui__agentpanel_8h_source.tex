@@ -1,0 +1,108 @@
+\doxysection{ui\+\_\+agentpanel.\+h}
+\hypertarget{ui__agentpanel_8h_source}{}\label{ui__agentpanel_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/build-\/SecurityCentre-\/Desktop-\/Debug/SecurityCentre\_autogen/include/ui\_agentpanel.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/build-\/SecurityCentre-\/Desktop-\/Debug/SecurityCentre\_autogen/include/ui\_agentpanel.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'agentpanel.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.6.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_AGENTPANEL\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_AGENTPANEL\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPlainTextEdit>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___agent_panel}{Ui\_AgentPanel}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ QLabel\ *label;}
+\DoxyCodeLine{00025\ \ \ \ \ QLabel\ *label\_2;}
+\DoxyCodeLine{00026\ \ \ \ \ QLabel\ *label\_3;}
+\DoxyCodeLine{00027\ \ \ \ \ QPlainTextEdit\ *plainTextEdit;}
+\DoxyCodeLine{00028\ \ \ \ \ QPushButton\ *pushButton;}
+\DoxyCodeLine{00029\ \ \ \ \ QLabel\ *label\_4;}
+\DoxyCodeLine{00030\ \ \ \ \ QLabel\ *label\_5;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi(QWidget\ *AgentPanel)}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (AgentPanel-\/>objectName().isEmpty())}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ AgentPanel-\/>setObjectName(\textcolor{stringliteral}{"{}AgentPanel"{}});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ AgentPanel-\/>resize(421,\ 472);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ label\ =\ \textcolor{keyword}{new}\ QLabel(AgentPanel);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ label-\/>setObjectName(\textcolor{stringliteral}{"{}label"{}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ label-\/>setGeometry(QRect(20,\ 10,\ 155,\ 36));}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ QFont\ font;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ font.setPointSize(20);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ font.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ label-\/>setFont(font);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ label\_2\ =\ \textcolor{keyword}{new}\ QLabel(AgentPanel);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ label\_2-\/>setObjectName(\textcolor{stringliteral}{"{}label\_2"{}});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ label\_2-\/>setGeometry(QRect(40,\ 70,\ 21,\ 27));}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ QFont\ font1;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ font1.setPointSize(15);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ label\_2-\/>setFont(font1);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ label\_3\ =\ \textcolor{keyword}{new}\ QLabel(AgentPanel);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ label\_3-\/>setObjectName(\textcolor{stringliteral}{"{}label\_3"{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ label\_3-\/>setGeometry(QRect(40,\ 130,\ 95,\ 27));}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ label\_3-\/>setFont(font1);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ plainTextEdit\ =\ \textcolor{keyword}{new}\ QPlainTextEdit(AgentPanel);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ plainTextEdit-\/>setObjectName(\textcolor{stringliteral}{"{}plainTextEdit"{}});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ plainTextEdit-\/>setGeometry(QRect(40,\ 170,\ 361,\ 281));}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ QFont\ font2;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ font2.setPointSize(13);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ plainTextEdit-\/>setFont(font2);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ plainTextEdit-\/>setUndoRedoEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ plainTextEdit-\/>setReadOnly(\textcolor{keyword}{true});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ pushButton\ =\ \textcolor{keyword}{new}\ QPushButton(AgentPanel);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ pushButton-\/>setObjectName(\textcolor{stringliteral}{"{}pushButton"{}});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ pushButton-\/>setGeometry(QRect(270,\ 60,\ 111,\ 51));}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ label\_4\ =\ \textcolor{keyword}{new}\ QLabel(AgentPanel);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ label\_4-\/>setObjectName(\textcolor{stringliteral}{"{}label\_4"{}});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ label\_4-\/>setGeometry(QRect(210,\ 70,\ 57,\ 27));}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ label\_4-\/>setFont(font1);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ label\_5\ =\ \textcolor{keyword}{new}\ QLabel(AgentPanel);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ label\_5-\/>setObjectName(\textcolor{stringliteral}{"{}label\_5"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ label\_5-\/>setGeometry(QRect(80,\ 70,\ 57,\ 27));}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ QFont\ font3;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ font3.setPointSize(15);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ font3.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ label\_5-\/>setFont(font3);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ retranslateUi(AgentPanel);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(AgentPanel);}
+\DoxyCodeLine{00080\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ retranslateUi(QWidget\ *AgentPanel)}
+\DoxyCodeLine{00083\ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ AgentPanel-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}AgentPanel"{}},\ \textcolor{stringliteral}{"{}Form"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ label-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}AgentPanel"{}},\ \textcolor{stringliteral}{"{}Agent\ Panel"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ label\_2-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}AgentPanel"{}},\ \textcolor{stringliteral}{"{}Id:"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ label\_3-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}AgentPanel"{}},\ \textcolor{stringliteral}{"{}Agent\ logs"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ plainTextEdit-\/>setPlainText(QCoreApplication::translate(\textcolor{stringliteral}{"{}AgentPanel"{}},\ \textcolor{stringliteral}{"{}treyertyer"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ pushButton-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}AgentPanel"{}},\ \textcolor{stringliteral}{"{}ON"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ label\_4-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}AgentPanel"{}},\ \textcolor{stringliteral}{"{}Status:"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ label\_5-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}AgentPanel"{}},\ \textcolor{stringliteral}{"{}<ID>"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00092\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_agent_panel}{AgentPanel}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___agent_panel}{Ui\_AgentPanel}}\ \{\};}
+\DoxyCodeLine{00098\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_AGENTPANEL\_H}}
+
+\end{DoxyCode}

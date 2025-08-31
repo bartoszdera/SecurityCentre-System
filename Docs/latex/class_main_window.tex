@@ -1,0 +1,90 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+{\ttfamily \#include $<$Main\+Window.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a43c5f4ddc3cdcdf96b114f0469bf1bf3}\label{class_main_window_a43c5f4ddc3cdcdf96b114f0469bf1bf3} 
+void {\bfseries choosen\+Agent\+ID} (std\+::string id\+Value)
+\item 
+\Hypertarget{class_main_window_a3e787f4bc22d6dcc3885beedf32cbe5a}\label{class_main_window_a3e787f4bc22d6dcc3885beedf32cbe5a} 
+void {\bfseries choosen\+Agent\+Info} (std\+::string info\+Value)
+\item 
+\Hypertarget{class_main_window_a71e092c6ac32647d33cd9bb52930519c}\label{class_main_window_a71e092c6ac32647d33cd9bb52930519c} 
+void {\bfseries choosen\+Agent\+State} (bool state\+Value)
+\item 
+\Hypertarget{class_main_window_a70603752c2e3b7b38a853a474339d599}\label{class_main_window_a70603752c2e3b7b38a853a474339d599} 
+void {\bfseries choosen\+Agent\+Logs} (std\+::vector$<$ std\+::string $>$ logs\+Value)
+\item 
+\Hypertarget{class_main_window_a9699b94200b0052faefee214f67350d3}\label{class_main_window_a9699b94200b0052faefee214f67350d3} 
+void {\bfseries access\+Granted} (int device\+Id)
+\item 
+\Hypertarget{class_main_window_aa62e7952fe1d19c875dc4d4f27e2d930}\label{class_main_window_aa62e7952fe1d19c875dc4d4f27e2d930} 
+void {\bfseries access\+Denied} (int device\+Id)
+\item 
+\Hypertarget{class_main_window_aa07c6c9c2e3672225f69613f38336b77}\label{class_main_window_aa07c6c9c2e3672225f69613f38336b77} 
+void {\bfseries signal\+Registered} (int device\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_aeb2459d7f039560303a5c13127a8158f}\label{class_main_window_aeb2459d7f039560303a5c13127a8158f} 
+void {\bfseries agent\+Choosen} (int arg1)
+\item 
+\Hypertarget{class_main_window_a0ecc178f517b2073dba646e91cc09ffd}\label{class_main_window_a0ecc178f517b2073dba646e91cc09ffd} 
+void {\bfseries agent\+State\+Changed} (int arg1)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
+{\bfseries Main\+Window} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_main_window_ac6581b824720e86debe61563041ece5b}{Main\+Window}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_device_storage}{Device\+Storage}} $>$ \+\_\+storage, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em A destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_main_window}{Main\+Window} class implementing signals handles for the main window of the application. 
+
+\label{doc-constructors}
+\Hypertarget{class_main_window_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_main_window_ac6581b824720e86debe61563041ece5b}\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_ac6581b824720e86debe61563041ece5b} 
+Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_device_storage}{Device\+Storage}} $>$}]{\+\_\+storage}{, }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+storage} & A shared pointer to \doxylink{class_device_storage}{Device\+Storage} instance \\
+\hline
+{\em parent} & A pointer to parent QWidget, default is nullptr \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/copied\+\_\+files/mainwindow\+\_\+kopia.\+h\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/Main\+Window.\+h\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/build-\/\+Security\+Centre-\/\+Desktop-\/\+Debug/\+Security\+Centre\+\_\+autogen/\+EWIEGA46\+WW/moc\+\_\+mainwindow\+\_\+kopia.\+cpp\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/copied\+\_\+files/mainwindow\+\_\+kopia.\+cpp\item 
+C\+:/\+Users/\+Administrator/repos/\+Security\+Centre-\/\+System/\+Security\+Centre/Main\+Window.\+cpp\end{DoxyCompactItemize}

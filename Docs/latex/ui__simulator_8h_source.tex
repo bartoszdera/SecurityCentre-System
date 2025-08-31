@@ -1,0 +1,172 @@
+\doxysection{ui\+\_\+simulator.\+h}
+\hypertarget{ui__simulator_8h_source}{}\label{ui__simulator_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/build-\/SecurityCentre-\/Desktop-\/Debug/SecurityCentre\_autogen/include/ui\_simulator.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/build-\/SecurityCentre-\/Desktop-\/Debug/SecurityCentre\_autogen/include/ui\_simulator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'simulator.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.6.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_SIMULATOR\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_SIMULATOR\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QFrame>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___simulator}{Ui\_Simulator}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ QPushButton\ *facial\_Authorized\_Try;}
+\DoxyCodeLine{00025\ \ \ \ \ QPushButton\ *facial\_Unauthorized\_Try;}
+\DoxyCodeLine{00026\ \ \ \ \ QPushButton\ *rfid\_Authorized\_Try;}
+\DoxyCodeLine{00027\ \ \ \ \ QPushButton\ *rfid\_Unauthorized\_Try;}
+\DoxyCodeLine{00028\ \ \ \ \ QPushButton\ *fingerprint\_Authorized\_Try;}
+\DoxyCodeLine{00029\ \ \ \ \ QPushButton\ *fingerprint\_Unauthorized\_Try;}
+\DoxyCodeLine{00030\ \ \ \ \ QPushButton\ *corridor\_Movement\_Try;}
+\DoxyCodeLine{00031\ \ \ \ \ QPushButton\ *Canteen\_Smoke\_Try;}
+\DoxyCodeLine{00032\ \ \ \ \ QPushButton\ *meeting\_room\_Movement\_Try;}
+\DoxyCodeLine{00033\ \ \ \ \ QLabel\ *label;}
+\DoxyCodeLine{00034\ \ \ \ \ QLabel\ *label\_2;}
+\DoxyCodeLine{00035\ \ \ \ \ QLabel\ *label\_3;}
+\DoxyCodeLine{00036\ \ \ \ \ QLabel\ *label\_4;}
+\DoxyCodeLine{00037\ \ \ \ \ QLabel\ *label\_5;}
+\DoxyCodeLine{00038\ \ \ \ \ QLabel\ *label\_6;}
+\DoxyCodeLine{00039\ \ \ \ \ QFrame\ *line;}
+\DoxyCodeLine{00040\ \ \ \ \ QFrame\ *line\_2;}
+\DoxyCodeLine{00041\ \ \ \ \ QLabel\ *label\_7;}
+\DoxyCodeLine{00042\ \ \ \ \ QLabel\ *label\_8;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi(QWidget\ *\mbox{\hyperlink{class_simulator}{Simulator}})}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_simulator}{Simulator}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_simulator}{Simulator}}-\/>setObjectName(\textcolor{stringliteral}{"{}Simulator"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_simulator}{Simulator}}-\/>resize(490,\ 520);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ facial\_Authorized\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ facial\_Authorized\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}facial\_Authorized\_Try"{}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ facial\_Authorized\_Try-\/>setGeometry(QRect(200,\ 60,\ 121,\ 41));}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ facial\_Unauthorized\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ facial\_Unauthorized\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}facial\_Unauthorized\_Try"{}});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ facial\_Unauthorized\_Try-\/>setGeometry(QRect(350,\ 60,\ 121,\ 41));}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ rfid\_Authorized\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ rfid\_Authorized\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}rfid\_Authorized\_Try"{}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ rfid\_Authorized\_Try-\/>setGeometry(QRect(200,\ 130,\ 121,\ 41));}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ rfid\_Unauthorized\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ rfid\_Unauthorized\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}rfid\_Unauthorized\_Try"{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ rfid\_Unauthorized\_Try-\/>setGeometry(QRect(350,\ 130,\ 121,\ 41));}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ fingerprint\_Authorized\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ fingerprint\_Authorized\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}fingerprint\_Authorized\_Try"{}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ fingerprint\_Authorized\_Try-\/>setGeometry(QRect(200,\ 200,\ 121,\ 41));}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ fingerprint\_Unauthorized\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ fingerprint\_Unauthorized\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}fingerprint\_Unauthorized\_Try"{}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ fingerprint\_Unauthorized\_Try-\/>setGeometry(QRect(350,\ 200,\ 121,\ 41));}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ corridor\_Movement\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ corridor\_Movement\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}corridor\_Movement\_Try"{}});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ corridor\_Movement\_Try-\/>setGeometry(QRect(276,\ 330,\ 121,\ 41));}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ Canteen\_Smoke\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ Canteen\_Smoke\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}Canteen\_Smoke\_Try"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ Canteen\_Smoke\_Try-\/>setGeometry(QRect(276,\ 400,\ 121,\ 41));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ meeting\_room\_Movement\_Try\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ meeting\_room\_Movement\_Try-\/>setObjectName(\textcolor{stringliteral}{"{}meeting\_room\_Movement\_Try"{}});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ meeting\_room\_Movement\_Try-\/>setGeometry(QRect(276,\ 470,\ 121,\ 41));}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ label\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ label-\/>setObjectName(\textcolor{stringliteral}{"{}label"{}});}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ label-\/>setGeometry(QRect(50,\ 60,\ 101,\ 41));}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ QFont\ font;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ font.setPointSize(15);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ font.setBold(\textcolor{keyword}{false});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ label-\/>setFont(font);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ label\_2\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ label\_2-\/>setObjectName(\textcolor{stringliteral}{"{}label\_2"{}});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ label\_2-\/>setGeometry(QRect(60,\ 130,\ 81,\ 41));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ QFont\ font1;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ font1.setPointSize(15);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ label\_2-\/>setFont(font1);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ label\_3\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ label\_3-\/>setObjectName(\textcolor{stringliteral}{"{}label\_3"{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ label\_3-\/>setGeometry(QRect(65,\ 200,\ 71,\ 41));}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ label\_3-\/>setFont(font);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ label\_4\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ label\_4-\/>setObjectName(\textcolor{stringliteral}{"{}label\_4"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ label\_4-\/>setGeometry(QRect(51,\ 330,\ 81,\ 41));}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ label\_4-\/>setFont(font1);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ label\_5\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ label\_5-\/>setObjectName(\textcolor{stringliteral}{"{}label\_5"{}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ label\_5-\/>setGeometry(QRect(56,\ 400,\ 71,\ 41));}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ label\_5-\/>setFont(font1);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ label\_6\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ label\_6-\/>setObjectName(\textcolor{stringliteral}{"{}label\_6"{}});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ label\_6-\/>setGeometry(QRect(25,\ 471,\ 131,\ 41));}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ label\_6-\/>setFont(font1);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ line\ =\ \textcolor{keyword}{new}\ QFrame(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ line-\/>setObjectName(\textcolor{stringliteral}{"{}line"{}});}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ line-\/>setGeometry(QRect(0,\ 310,\ 490,\ 16));}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ line-\/>setFrameShadow(QFrame::Shadow::Sunken);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ line-\/>setLineWidth(0);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ line-\/>setMidLineWidth(3);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ line-\/>setFrameShape(QFrame::HLine);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ line\_2\ =\ \textcolor{keyword}{new}\ QFrame(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ line\_2-\/>setObjectName(\textcolor{stringliteral}{"{}line\_2"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ line\_2-\/>setGeometry(QRect(0,\ 40,\ 490,\ 16));}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ line\_2-\/>setFrameShadow(QFrame::Shadow::Sunken);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ line\_2-\/>setLineWidth(0);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ line\_2-\/>setMidLineWidth(3);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ line\_2-\/>setFrameShape(QFrame::HLine);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ label\_7\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ label\_7-\/>setObjectName(\textcolor{stringliteral}{"{}label\_7"{}});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ label\_7-\/>setGeometry(QRect(26,\ 280,\ 131,\ 31));}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ QFont\ font2;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ font2.setPointSize(20);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ font2.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ label\_7-\/>setFont(font2);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ label\_8\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ label\_8-\/>setObjectName(\textcolor{stringliteral}{"{}label\_8"{}});}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ label\_8-\/>setGeometry(QRect(10,\ 0,\ 181,\ 41));}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ label\_8-\/>setFont(font2);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ retranslateUi(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_simulator}{Simulator}});}
+\DoxyCodeLine{00134\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ retranslateUi(QWidget\ *\mbox{\hyperlink{class_simulator}{Simulator}})}
+\DoxyCodeLine{00137\ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_simulator}{Simulator}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ facial\_Authorized\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Authorized"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ facial\_Unauthorized\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Unauthorized"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ rfid\_Authorized\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Authorized"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ rfid\_Unauthorized\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Unauthorized"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ fingerprint\_Authorized\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Authorized"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ fingerprint\_Unauthorized\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Unauthorized"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ corridor\_Movement\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Movement"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ Canteen\_Smoke\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Smoke"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ meeting\_room\_Movement\_Try-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Movement"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ label-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Laboratory"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ label\_2-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Lab\ Vault"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ label\_3-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Archive"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ label\_4-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Corridor"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ label\_5-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Canteen"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ label\_6-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Meeting\ room"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ label\_7-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Detectors"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ label\_8-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}Simulator"{}},\ \textcolor{stringliteral}{"{}Access\ Agents"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00156\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_simulator}{Simulator}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___simulator}{Ui\_Simulator}}\ \{\};}
+\DoxyCodeLine{00162\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_SIMULATOR\_H}}
+
+\end{DoxyCode}

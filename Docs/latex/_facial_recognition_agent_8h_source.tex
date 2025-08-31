@@ -1,0 +1,29 @@
+\doxysection{Facial\+Recognition\+Agent.\+h}
+\hypertarget{_facial_recognition_agent_8h_source}{}\label{_facial_recognition_agent_8h_source}\index{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/Model/FacialRecognitionAgent.h@{C:/Users/Administrator/repos/SecurityCentre-\/System/SecurityCentre/Model/FacialRecognitionAgent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FACIALRECOGNITIONAGENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FACIALRECOGNITIONAGENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IValidData.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}AgentDevice.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <qtmetamacros.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_facial_recognition_agent_ad9a8dd7e9163d569ad7da82966015d5b}{FacialRecognitionAgent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_agent_device_a1e28c340986acc94eb4f4c7f31254cab}{AgentDevice}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_facial_recognition_agent_ad9a8dd7e9163d569ad7da82966015d5b}{FacialRecognitionAgent}}(\textcolor{keywordtype}{int}\ \_id,\ std::unique\_ptr<IValidData>\ \_validFacials);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \ \ \ \ AccessResult\ \mbox{\hyperlink{class_facial_recognition_agent_ab0c47a0aac308b83a9ff644e0482e714}{verifyAccess}}(\textcolor{keyword}{const}\ std::any\&\ credentials)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ std::unique\_ptr<IValidData>\ validFacials;}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FACIALRECOGNITIONAGENT\_H}}
+
+\end{DoxyCode}
