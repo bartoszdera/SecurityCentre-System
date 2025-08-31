@@ -8,12 +8,22 @@ namespace Ui {
 class Simulator;
 }
 
+/*!
+ * Simulator class implementing methods for simulating signals for devices testing.
+ */
 class Simulator : public QWidget
 {
     Q_OBJECT
 
 public:
+    //! A constructor
+    /*!
+     * \param _storage A shared pointer to DeviceStorage instance
+     * \param parent A pointer to parent QWidget, default is nullptr
+     */
     explicit Simulator(std::shared_ptr<DeviceStorage> _storage, QWidget *parent = nullptr);
+
+    //! A destructor
     ~Simulator();
 
 private slots:

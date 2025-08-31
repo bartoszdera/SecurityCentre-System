@@ -1,4 +1,4 @@
-#include "fingerprintagent.h"
+#include "FingerprintAgent.h"
 #include "IValidData.h"
 #include <memory>
 

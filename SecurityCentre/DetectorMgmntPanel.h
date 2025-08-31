@@ -9,12 +9,22 @@ namespace Ui {
 class DetectorMgmntPanel;
 }
 
+/*!
+ * DetectorMgmntPanel class representing the management panel for a detector device.
+ */
 class DetectorMgmntPanel : public QWidget
 {
     Q_OBJECT
 
 public:
+    //! A constructor
+    /*!
+     * \param _device A shared pointer to a DetectorDevice object representing the device to be managed
+     * \param parent A pointer to the parent QWidget, defaulting to nullptr
+     */
     explicit DetectorMgmntPanel(std::shared_ptr<DetectorDevice> _device, QWidget *parent = nullptr);
+
+    //! A destructor
     ~DetectorMgmntPanel();
 
 private:

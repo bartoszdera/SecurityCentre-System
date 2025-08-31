@@ -1,8 +1,8 @@
-#include "simulator.h"
+#include "Simulator.h"
 #include "Model/AgentDevice.h"
 #include "Model/DetectorDevice.h"
 #include "Model/DeviceStorage.h"
-#include "ui_simulator.h"
+#include "ui_Simulator.h"
 #include <memory>
 #include <qwidget.h>
 

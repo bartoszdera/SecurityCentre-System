@@ -2,10 +2,10 @@
 #include "Model/DetectorDevice.h"
 #include "Model/ValidDataWrapper.h"
 #include "Model/DeviceStorage.h"
-#include "Model/fingerprintagent.h"
-#include "Model/rfidagent.h"
+#include "Model/FingerprintAgent.h"
+#include "Model/RFIDAgent.h"
 #include "MainWindow.h"
-#include "Model/facialrecognitionagent.h"
+#include "Model/FacialRecognitionAgent.h"
 
 #include <QApplication>
 #include <memory>

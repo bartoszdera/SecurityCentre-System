@@ -11,12 +11,22 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
+/*!
+ * MainWindow class implementing signals handles for the main window of the application.
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    //! A constructor
+    /*!
+     * \param _storage A shared pointer to DeviceStorage instance
+     * \param parent A pointer to parent QWidget, default is nullptr
+     */
     MainWindow(std::shared_ptr<DeviceStorage> _storage, QWidget *parent = nullptr);
+
+    //! A destructor
     ~MainWindow();
 
 private:

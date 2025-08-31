@@ -3,11 +3,15 @@
 
 #include <any>
 
+/*!
+ * IValidData interface for declaring a virtual method to check if given data matches.
+ */
 class IValidData {
 public:
-    virtual ~IValidData() = default;
-
-    // Check if the given credential matches
+    /*!
+     * virtual method to check if given data matches.
+     * \param toMatch An object of type std::any representing the data to be matched
+     */
     virtual bool matches(const std::any& toMatch) const = 0;
 };
 

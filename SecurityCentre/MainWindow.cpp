@@ -4,7 +4,7 @@
 #include "Model/ElectronicDevice.h"
 #include "AgentMgmntPanel.h"
 #include "DetectorMgmntPanel.h"
-#include "simulator.h"
+#include "Simulator.h"
 #include <iostream>
 #include <memory>
 #include <qobject.h>

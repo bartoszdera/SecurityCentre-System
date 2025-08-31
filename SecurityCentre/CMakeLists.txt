@@ -19,9 +19,9 @@ set(PROJECT_SOURCES
         MainWindow.ui
 
 
-        Model/rfidagent.h Model/rfidagent.cpp
-        Model/facialrecognitionagent.h Model/facialrecognitionagent.cpp
-        Model/fingerprintagent.h Model/fingerprintagent.cpp
+        Model/RFIDAgent.h Model/RFIDAgent.cpp
+        Model/FacialRecognitionAgent.h Model/FacialRecognitionAgent.cpp
+        Model/FingerprintAgent.h Model/FingerprintAgent.cpp
         Model/Valid/validfacial.h Model/Valid/validfacial.cpp
         Model/Valid/validrfid.h Model/Valid/validrfid.cpp
         Model/Valid/validfingerprint.h Model/Valid/validfingerprint.cpp
@@ -31,14 +31,14 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(SecurityCentre
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        simulator.h simulator.cpp simulator.ui
+        Simulator.h Simulator.cpp Simulator.ui
         AgentMgmntPanel.h AgentMgmntPanel.cpp AgentMgmntPanel.ui
         Model/ElectronicDevice.h Model/ElectronicDevice.cpp
         Model/DetectorDevice.h Model/DetectorDevice.cpp
         Model/AgentDevice.h Model/AgentDevice.cpp
-        Model/validdata.h Model/validdata.cpp
+        Model/ValidData.h
 
-        Model/Enum/accessresult.h
+        Model/Enum/AccessResult.h
         Model/DeviceStorage.h Model/DeviceStorage.cpp
         Model/IValidData.h
         Model/ValidDataWrapper.h
